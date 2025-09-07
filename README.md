@@ -5,19 +5,19 @@
 [![Issues](https://img.shields.io/github/issues/RumasorengFadil/nextjs-modern-portofolio-v1)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/issues)
 [![License](https://img.shields.io/github/license/RumasorengFadil/nextjs-modern-portofolio-v1)](./LICENSE)
 
-🚀 **Next.js Modern Portfolio v1** adalah template **portfolio modern** berbasis **Next.js 14 App Router**, **Tailwind CSS v4**, **Framer Motion**, dan **ShadCN UI**.  
-Cocok untuk **developer, freelancer, designer, dan kreator** yang ingin menampilkan profil, project, serta pengalaman dengan tampilan **clean, responsif, dan SEO-friendly**.
+🚀 **Next.js Modern Portfolio v1** is a **modern portfolio** template based on **Next.js 14 App Router**, **Tailwind CSS v4**, **Framer Motion**, and **ShadCN UI**.  
+Suitable for **developers, freelancers, designers, and creators** who want to showcase their profile, projects, and experience with a **clean, responsive, and SEO-friendly** look.
 
 ---
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-- ⚡ **Next.js 14 App Router** → SSR/ISR untuk SEO & performa optimal  
-- 🎨 **Tailwind CSS v4 + ShadCN UI** → desain modern & mudah dikustomisasi  
-- 🎬 **Framer Motion Animations** → animasi interaktif & smooth  
-- 🌙 **Dark Mode Toggle** → dukungan mode gelap/terang  
-- 📂 **Blog Section (opsional)** → showcase artikel & tulisan teknis  
-- 📱 **Responsive** → tampil sempurna di semua device  
+- ⚡ **Next.js 14 App Router** → SSR/ISR for SEO & optimal performance
+- 🎨 **Tailwind CSS v4 + ShadCN UI** → modern & easily customizable design  
+- 🎬 **Framer Motion Animations** → interactive & smooth animations  
+- 🌙 **Dark Mode Toggle** → dark/light mode support  
+- 📂 **Blog Section (optional)** → showcase articles & technical posts  
+- 📱 **Responsive** → looks perfect on all devices  
 
 ---
 
@@ -29,37 +29,37 @@ Cocok untuk **developer, freelancer, designer, dan kreator** yang ingin menampil
 
 ---
 
-## ⚙️ Cara Install & Setup
+## ⚙️ How to Install & Setup
 
-Clone repo ini dan jalankan secara lokal:
+Clone this repo and run it locally:
 
 ```bash
 # Clone repository
 git clone https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1.git
 
-# Masuk ke folder project
+# Enter the project folder
 cd nextjs-modern-portofolio-v1
 
 # Install dependencies
 npm install
 
-# Jalankan development server
+# Run the development server
 npm run dev
 
-Akses di http://localhost:3000
+Access at http://localhost:3000
 ```
 
 ## 💡 Use Cases
 
-Gunakan repo ini jika kamu ingin:
+Use this repo if you want to:
 
-Membangun portfolio modern dengan cepat
+Build a modern portfolio quickly
 
-Menampilkan profile, project, dan pengalaman kerja
+Showcase your profile, projects, and work experience
 
-Membuat landing page personal untuk developer / designer
+Create a personal landing page for developers/designers
 
-Membuat resume online interaktif yang SEO-friendly
+Create an interactive, SEO-friendly online resume
 
 ## 🛠️ Tech Stack
 
@@ -77,27 +77,28 @@ Zustand
 
 ## 🤝 Contributing
 
-Kontribusi sangat diterima!
-Jika menemukan bug atau ingin menambahkan fitur:
+Contributions are greatly appreciated!
+If you find a bug or want to add a feature:
 
-Fork repo ini
+Fork this repo
 
-Buat branch baru (git checkout -b feature/namafitur)
+Create a new branch (git checkout -b feature/feature_name)
 
-Commit perubahan (git commit -m "Add namafitur")
+Commit the changes (git commit -m “Add feature_name”)
 
-Push branch (git push origin feature/namafitur)
+Push the branch (git push origin feature/feature_name)
 
-Buat Pull Request 🎉
+Create a Pull Request 🎉
 
 ## 📄 License
 
-Lisensi: MIT License
- – silakan gunakan, modifikasi, dan distribusikan.
+License: MIT License
+– feel free to use, modify, and distribute.
+– Don't forget to include the credit.
 
-## ⭐ Kalau repo ini bermanfaat, jangan lupa star untuk support!
+## ⭐ If this repo is useful, don't forget to star it to show your support!
 
 
 ---
 
-Mau saya tambahin juga bagian **"Roadmap"** (fitur yang akan datang) biar kelihatan project 
+I'd also like to add a **“Roadmap”** section (upcoming features) to give an overview of the project. 
