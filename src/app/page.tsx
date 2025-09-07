@@ -11,6 +11,7 @@ import CtaSection from '@/components/organism/CtaSectionV1'
 import { FooterSection } from '@/components/organism/FooterSection'
 import PublicLayout from '@/layout/PublicLayout'
 import { FadeIn } from '@/components/motion/FadeIn'
+import Particles from '@/components/organism/Particles'
 
 export default function HomePage() {
   return (
@@ -46,10 +47,10 @@ export default function HomePage() {
       <CommandPrompt />
 
       {/* Command Particles */}
-      {/* <Particles
+      <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
-      /> */}
+      />
 
       {/* Blog Preview */}
       <FadeIn>
