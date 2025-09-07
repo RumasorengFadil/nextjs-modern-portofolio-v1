@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Next.js Modern Portfolio v1
 
-## Getting Started
+[![Stars](https://img.shields.io/github/stars/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/username/nextjs-modern-portofolio-v1/stargazers)
+[![Forks](https://img.shields.io/github/forks/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/username/nextjs-modern-portofolio-v1/network/members)
+[![Issues](https://img.shields.io/github/issues/username/nextjs-modern-portofolio-v1)](https://github.com/username/nextjs-modern-portofolio-v1/issues)
+[![License](https://img.shields.io/github/license/username/nextjs-modern-portofolio-v1)](./LICENSE)
 
-First, run the development server:
+🚀 **Next.js Modern Portfolio v1** adalah template **portfolio modern** berbasis **Next.js 14 App Router**, **Tailwind CSS v4**, **Framer Motion**, dan **ShadCN UI**.  
+Cocok untuk **developer, freelancer, designer, dan kreator** yang ingin menampilkan profil, project, serta pengalaman dengan tampilan **clean, responsif, dan SEO-friendly**.
+
+---
+
+## ✨ Fitur Utama
+
+- ⚡ **Next.js 14 App Router** → SSR/ISR untuk SEO & performa optimal  
+- 🎨 **Tailwind CSS v4 + ShadCN UI** → desain modern & mudah dikustomisasi  
+- 🎬 **Framer Motion Animations** → animasi interaktif & smooth  
+- 🌙 **Dark Mode Toggle** → dukungan mode gelap/terang  
+- 📂 **Blog Section (opsional)** → showcase artikel & tulisan teknis  
+- 📱 **Responsive** → tampil sempurna di semua device  
+
+---
+
+## 📸 Demo
+
+🔗 **Live Demo:** [your-demo-link.com](https://your-demo-link.com)  
+
+![Preview Screenshot](./public/preview.png)
+
+---
+
+## ⚙️ Cara Install & Setup
+
+Clone repo ini dan jalankan secara lokal:
 
 ```bash
+# Clone repository
+git clone https://github.com/username/nextjs-modern-portofolio-v1.git
+
+# Masuk ke folder project
+cd nextjs-modern-portofolio-v1
+
+# Install dependencies
+npm install
+
+# Jalankan development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🧩 Bagian 4 – Roadmap, Contributing, License
+```markdown
+## 🗺️ Roadmap
 
-## Learn More
+- [ ] Tambah halaman **Blog** dengan pagination  
+- [ ] Integrasi CMS (misalnya Sanity atau Contentlayer)  
+- [ ] Mode **Multi-Bahasa (i18n)**  
+- [ ] Komponen tambahan (Testimonial, Contact Form, dsb)  
+- [ ] Deployment guide (Vercel / Netlify)  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Kontribusi sangat diterima!  
+Jika menemukan bug atau ingin menambahkan fitur:  
 
-## Deploy on Vercel
+1. Fork repo ini  
+2. Buat branch baru (`git checkout -b feature/namafitur`)  
+3. Commit perubahan (`git commit -m "Add namafitur"`)  
+4. Push branch (`git push origin feature/namafitur`)  
+5. Buat Pull Request 🎉  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+Lisensi: [MIT License](./LICENSE) – silakan gunakan, modifikasi, dan distribusikan.  
+
+---
+
+⭐ Kalau repo ini bermanfaat, jangan lupa **star** untuk support!  
