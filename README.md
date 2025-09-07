@@ -1,6 +1,6 @@
 # 🌐 Next.js Modern Portfolio v1
 
-[![Stars](https://img.shields.io/github/stars/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/stargazers)
+[![Stars](https://img.shields.io/github/stars/RumasorengFadil/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/stargazers)
 [![Forks](https://img.shields.io/github/forks/RumasorengFadil/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/network/members)
 [![Issues](https://img.shields.io/github/issues/RumasorengFadil/nextjs-modern-portofolio-v1)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/issues)
 [![License](https://img.shields.io/github/license/RumasorengFadil/nextjs-modern-portofolio-v1)](./LICENSE)
@@ -35,7 +35,7 @@ Clone repo ini dan jalankan secara lokal:
 
 ```bash
 # Clone repository
-git clone https://github.com/username/nextjs-modern-portofolio-v1.git
+git clone https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1.git
 
 # Masuk ke folder project
 cd nextjs-modern-portofolio-v1
