@@ -1,9 +1,9 @@
 # 🌐 Next.js Modern Portfolio v1
 
-[![Stars](https://img.shields.io/github/stars/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/username/nextjs-modern-portofolio-v1/stargazers)
-[![Forks](https://img.shields.io/github/forks/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/network/members)
-[![Issues](https://img.shields.io/github/issues/username/nextjs-modern-portofolio-v1)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/issues)
-[![License](https://img.shields.io/github/license/username/nextjs-modern-portofolio-v1)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/username/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/stargazers)
+[![Forks](https://img.shields.io/github/forks/RumasorengFadil/nextjs-modern-portofolio-v1?style=social)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/network/members)
+[![Issues](https://img.shields.io/github/issues/RumasorengFadil/nextjs-modern-portofolio-v1)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/issues)
+[![License](https://img.shields.io/github/license/RumasorengFadil/nextjs-modern-portofolio-v1)](./LICENSE)
 
 🚀 **Next.js Modern Portfolio v1** adalah template **portfolio modern** berbasis **Next.js 14 App Router**, **Tailwind CSS v4**, **Framer Motion**, dan **ShadCN UI**.  
 Cocok untuk **developer, freelancer, designer, dan kreator** yang ingin menampilkan profil, project, serta pengalaman dengan tampilan **clean, responsif, dan SEO-friendly**.
@@ -65,11 +65,15 @@ Membuat resume online interaktif yang SEO-friendly
 
 Next.js 14
 
+Laravel 10
+
 Tailwind CSS v4
 
 ShadCN UI
 
 Framer Motion
+
+Zustand
 
 ## 🤝 Contributing
 
