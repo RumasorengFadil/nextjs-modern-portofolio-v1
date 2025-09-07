@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme{
+    --animate-title: title 3s ease-out forwards;
+    --animate-fade-in : fade-in 3s ease-in-out forwards;
+    --animate-fade-left : fade-left 3s ease-in-out forwards;
+    --animate-fade-right : fade-right 3s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+	0% {
+		transform: translateX(100%);
+		opacity: 0%
+	}
+
+	30% {
+		transform: translateX(0%);
+		opacity: 100%;
+	}
+	100% {
+	    opacity: 0%;
+	}
+}
+@keyframes fade-right {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0%;
+	}
+
+	30% {
+		transform: translateX(0%);
+		opacity: 100%;
+	}
+	100% {
+	    opacity: 0%;
+	}
+}
+@keyframes title {
+    0% {
+        line-height: 0%;
+        letter-spacing: 0.25em;
+        opacity: 0;
+    }
+	25% {
+		line-height: 0%;
+		opacity: 0%;
+	}
+	80% {
+		opacity: 100%;
+	}
+
+	100% {
+		line-height: 100%;
+		opacity: 100%;
+		}
+}
