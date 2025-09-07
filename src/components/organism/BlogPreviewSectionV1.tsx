@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function BlogPreviewSection() {
     return (
-        <section className="container py-20">
+        <section className="container py-20 mx-auto">
             <h2 className="text-4xl font-bold text-center">Latest Posts</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map((p) => (
