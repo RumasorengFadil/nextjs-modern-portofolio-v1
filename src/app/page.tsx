@@ -1,12 +1,10 @@
 "use client"
-import PageTransition from '@/components/site/page-transition'
 import AboutSection from '@/components/organism/AboutSectionV2'
 import TechStackSection from '@/components/organism/TechStackSectionV2'
 import LatestProject from '@/components/organism/LatestProjectSectionV1'
 import HeroSection from '@/components/organism/HeroSectionV2'
 import NavbarSection from '@/components/organism/NavbarSectionV1'
 import { CommandPrompt } from '@/components/organism/CommandPromptV1'
-import Particles from '@/components/organism/Particles'
 import ExperienceSection from '@/components/organism/ExperienceSectionV2'
 import BlogPreviewSection from '@/components/organism/BlogPreviewSectionV1'
 import CtaSection from '@/components/organism/CtaSectionV1'
@@ -48,10 +46,10 @@ export default function HomePage() {
       <CommandPrompt />
 
       {/* Command Particles */}
-      <Particles
+      {/* <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
         quantity={100}
-      />
+      /> */}
 
       {/* Blog Preview */}
       <FadeIn>
