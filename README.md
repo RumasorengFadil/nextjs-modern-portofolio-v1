@@ -46,38 +46,54 @@ npm install
 # Jalankan development server
 npm run dev
 
+Akses di http://localhost:3000
+.
+
+💡 Use Cases
+
+Gunakan repo ini jika kamu ingin:
+
+Membangun portfolio modern dengan cepat
+
+Menampilkan profile, project, dan pengalaman kerja
+
+Membuat landing page personal untuk developer / designer
+
+Membuat resume online interaktif yang SEO-friendly
+
+🛠️ Tech Stack
+
+Next.js 14
+
+Tailwind CSS v4
+
+ShadCN UI
+
+Framer Motion
+
+🤝 Contributing
+
+Kontribusi sangat diterima!
+Jika menemukan bug atau ingin menambahkan fitur:
+
+Fork repo ini
+
+Buat branch baru (git checkout -b feature/namafitur)
+
+Commit perubahan (git commit -m "Add namafitur")
+
+Push branch (git push origin feature/namafitur)
+
+Buat Pull Request 🎉
+
+📄 License
+
+Lisensi: MIT License
+ – silakan gunakan, modifikasi, dan distribusikan.
+
+⭐ Kalau repo ini bermanfaat, jangan lupa star untuk support!
+
 
 ---
 
-### 🧩 Bagian 4 – Roadmap, Contributing, License
-```markdown
-## 🗺️ Roadmap
-
-- [ ] Tambah halaman **Blog** dengan pagination  
-- [ ] Integrasi CMS (misalnya Sanity atau Contentlayer)  
-- [ ] Mode **Multi-Bahasa (i18n)**  
-- [ ] Komponen tambahan (Testimonial, Contact Form, dsb)  
-- [ ] Deployment guide (Vercel / Netlify)  
-
----
-
-## 🤝 Contributing
-
-Kontribusi sangat diterima!  
-Jika menemukan bug atau ingin menambahkan fitur:  
-
-1. Fork repo ini  
-2. Buat branch baru (`git checkout -b feature/namafitur`)  
-3. Commit perubahan (`git commit -m "Add namafitur"`)  
-4. Push branch (`git push origin feature/namafitur`)  
-5. Buat Pull Request 🎉  
-
----
-
-## 📄 License
-
-Lisensi: [MIT License](./LICENSE) – silakan gunakan, modifikasi, dan distribusikan.  
-
----
-
-⭐ Kalau repo ini bermanfaat, jangan lupa **star** untuk support!  
+Mau saya tambahin juga bagian **"Roadmap"** (fitur yang akan datang) biar kelihatan project 
