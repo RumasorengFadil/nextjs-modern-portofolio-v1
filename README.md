@@ -47,7 +47,7 @@ npm install
 npm run dev
 
 Akses di http://localhost:3000
-.
+```
 
 ## 💡 Use Cases
 
@@ -61,7 +61,7 @@ Membuat landing page personal untuk developer / designer
 
 Membuat resume online interaktif yang SEO-friendly
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Next.js 14
 
@@ -71,7 +71,7 @@ ShadCN UI
 
 Framer Motion
 
-🤝 Contributing
+## 🤝 Contributing
 
 Kontribusi sangat diterima!
 Jika menemukan bug atau ingin menambahkan fitur:
@@ -86,12 +86,12 @@ Push branch (git push origin feature/namafitur)
 
 Buat Pull Request 🎉
 
-📄 License
+## 📄 License
 
 Lisensi: MIT License
  – silakan gunakan, modifikasi, dan distribusikan.
 
-⭐ Kalau repo ini bermanfaat, jangan lupa star untuk support!
+## ⭐ Kalau repo ini bermanfaat, jangan lupa star untuk support!
 
 
 ---
