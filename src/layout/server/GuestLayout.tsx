@@ -1,7 +1,7 @@
 import { PropsWithChildren, ReactNode } from 'react';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import GuestLayoutClient from './GuestLayoutClient';
+import GuestLayoutClient from '../client/GuestLayoutClient';
 
 export default async function GuestLayout({ children }: PropsWithChildren<{ children: ReactNode }>) {
     const refreshToken = (await cookies()).get("refresh_token")?.value;
