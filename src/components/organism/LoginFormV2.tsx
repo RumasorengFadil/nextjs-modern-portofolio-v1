@@ -8,7 +8,6 @@ import Link from 'next/link';
 import ButtonWithLoading from './ButtonWithLoadingV1';
 import { Checkbox } from '../ui/checkbox';
 import { Credentials } from '@/typedata/auth/credentials';
-import { Button } from '../ui/button';
 
 export const LoginForm = ({
     form, loading = false, onSubmit, setData,

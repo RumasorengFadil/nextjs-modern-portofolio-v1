@@ -3,16 +3,12 @@
 import Head from "next/head"
 import { FormEventHandler, useEffect } from "react";
 import { ResetPassForm } from "@/typedata/auth/resetPassForm";
-import { useSearchParams } from "next/navigation";
 import { useRouter } from "nextjs-toploader/app";
 import { useForm } from "@/hooks/use-form";
 import ResetPasswordForm from "@/components/organism/ResetPasswordFormV1";
 
-export default function PageClient({ }) {
-    const params = useSearchParams();
+export default function PageClient({token, email} : {token:string, email:string}) {
     const router = useRouter();
-    const token = params.get("token");
-    const email = params.get("email");
 
     const { data, setData, submit, loading } = useForm<ResetPassForm>({
         token: "",
@@ -23,11 +19,11 @@ export default function PageClient({ }) {
 
     useEffect(() => {
         setData("token", token ?? "");
-    }, [token, setData]);
+    }, [token]);
 
     useEffect(() => {
         setData("email", email ?? "");
-    }, [email, setData]);
+    }, [email]);
 
     const handleSubmit: FormEventHandler = (e) => {
         e.preventDefault();
