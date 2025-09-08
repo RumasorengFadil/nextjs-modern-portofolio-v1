@@ -2,8 +2,8 @@
 import axios, { AxiosError, AxiosRequestHeaders, AxiosResponse } from "axios";
 import { showToasts } from "./showToasts";
 import { useTopLoader } from "nextjs-toploader";
-import { useAuthStore } from "@/store/useAuthStore";
 import { CustomAxiosRequestConfig } from "@/typdata/customAxiosRequestConfig";
+import { useAuthStore } from "@/store/use-auth-store";
 
 const axiosClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL, // simpan di .env
