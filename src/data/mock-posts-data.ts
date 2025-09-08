@@ -135,11 +135,11 @@ production.`,
 ];
 
 export const socialLinks = [
-  { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-  { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-  { text: "Github", href: "https://github.com/immois/astro-zen" },
-  { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-  { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+  { text: "Instagram", href: "https://www.instagram.com/fadilrumasoreng/" },
+  { text: "LinkedIn", href: "https://www.linkedin.com/in/fadil-hijayat-rumasoreng-4944671b9/" },
+  { text: "Github", href: "https://github.com/RumasorengFadil" },
+  { text: "Youtube", href: "https://github.com/RumasorengFadil" },
+  { text: "Dribbble", href: "https://github.com/RumasorengFadil" },
 ];
 
 export const author = "Fadil Hijayat Rumasoreng";

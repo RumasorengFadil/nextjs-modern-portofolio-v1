@@ -1,4 +1,5 @@
 import { author, socialLinks, year } from "@/data/mock-posts-data"
+import Link from "next/link"
 
 export const FooterSection = () => {
     return <section
@@ -8,13 +9,13 @@ export const FooterSection = () => {
             {
                 socialLinks.map(({ text, href }, i) => (
                     <li key={i}>
-                        <a
+                        <Link
                             href={href}
                             target="_blank"
                             className="inline-block px-4 py-3 after:relative after:bottom-[-4px] after:content-[url(/external.svg)] hover:text-primary"
                         >
                             {text}
-                        </a>
+                        </Link>
                     </li>
                 ))
             }
