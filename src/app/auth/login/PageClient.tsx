@@ -2,11 +2,11 @@
 
 import Head from "next/head"
 import { FormEventHandler } from "react"
-import { LoginFormN } from "@/design-system/organisms/LoginFormN"
-import { useForm } from "@/hooks/useForm"
-import { Credentials } from "@/typdata/credentials"
 import { useRouter } from "nextjs-toploader/app"
 import { useAuthStore } from "@/store/useAuthStore"
+import { LoginForm } from "@/components/organism/LoginFormV1"
+import { Credentials } from "@/typedata/auth/credentials"
+import { useForm } from "@/hooks/use-form"
 
 export default function PageClient({ }) {
     const { setAuth } = useAuthStore();
@@ -36,7 +36,7 @@ export default function PageClient({ }) {
         <Head>Manage Blog</Head>
 
         {/* Content */}
-        <LoginFormN form={data} onSubmit={onSubmit} loading={loading} setData={setData} />
+        <LoginForm form={data} onSubmit={onSubmit} loading={loading} setData={setData} />
     </>
 }
 

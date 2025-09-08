@@ -3,13 +3,13 @@ import { CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import { Credentials } from '@/typdata/credentials';
 import { FormEventHandler } from 'react';
 import Link from 'next/link';
 import ButtonWithLoading from './ButtonWithLoadingV1';
 import { Checkbox } from '../ui/checkbox';
+import { Credentials } from '@/typedata/auth/credentials';
 
-export const LoginFormN = ({
+export const LoginForm = ({
     form, loading = false, onSubmit, setData,
 }: {
     form: Credentials | null,
@@ -62,11 +62,11 @@ export const LoginFormN = ({
                                     <Checkbox
                                         name="remember"
                                         checked={form?.remember}
-                                        onCheckedChange={(checked) => setData('remember', checked)}
+                                        onCheckedChange={(checked:boolean) => setData('remember', checked)}
                                     />
                                     <span className="ms-2 text-sm text-gray-600">Remember me</span>
                                 </label>
-                            </div>
+                            </div>  
                             <ButtonWithLoading
                                 type='submit'
                                 isLoading={loading}
