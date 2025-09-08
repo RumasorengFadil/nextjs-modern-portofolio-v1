@@ -3,10 +3,10 @@
 import Head from "next/head"
 import { FormEventHandler } from "react"
 import { useRouter } from "nextjs-toploader/app"
-import { useAuthStore } from "@/store/useAuthStore"
 import { LoginForm } from "@/components/organism/LoginFormV1"
 import { Credentials } from "@/typedata/auth/credentials"
 import { useForm } from "@/hooks/use-form"
+import { useAuthStore } from "@/store/use-auth-store"
 
 export default function PageClient({ }) {
     const { setAuth } = useAuthStore();

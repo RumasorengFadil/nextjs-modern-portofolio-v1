@@ -1,4 +1,4 @@
-import axiosClient from "@/utils/axiosClient";
+import axiosClient from "@/lib/axiosClient";
 import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { useState } from "react";
 
