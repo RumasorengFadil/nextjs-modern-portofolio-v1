@@ -1,12 +1,12 @@
 "use client"
 
 import Head from "next/head"
-import { useForm } from "@/hooks/useForm";
 import { FormEventHandler, useEffect } from "react";
-import ResetPasswordForm from "@/design-system/organisms/ResetPasswordForm";
-import { ResetPassForm } from "@/typdata/resetPassForm";
+import { ResetPassForm } from "@/typedata/auth/resetPassForm";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "nextjs-toploader/app";
+import { useForm } from "@/hooks/use-form";
+import ResetPasswordForm from "@/components/organism/ResetPasswordFormV1";
 
 export default function PageClient({ }) {
     const params = useSearchParams();

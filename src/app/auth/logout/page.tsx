@@ -1,5 +1,5 @@
 "use client"
-import axiosClient from "@/utils/axiosClient";
+import axiosClient from "@/lib/axiosClient";
 import { useRouter } from "nextjs-toploader/app";
 
 

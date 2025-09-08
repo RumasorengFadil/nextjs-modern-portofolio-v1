@@ -1,4 +1,4 @@
-import GuestLayout from "@/Layouts/GuestLayout";
+import GuestLayout from "@/layout/server/GuestLayout";
 import PageClient from "./PageClient";
 
 
