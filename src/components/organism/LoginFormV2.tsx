@@ -26,7 +26,7 @@ export const LoginForm = ({
                             <div className="flex flex-col items-center text-center">
                                 <h1 className="text-2xl font-bold">Welcome back</h1>
                                 <p className="text-muted-foreground text-balance">
-                                    Login to your bbyts account
+                                    Login to your account
                                 </p>
                             </div>
                             <div className="grid gap-3">
@@ -71,7 +71,7 @@ export const LoginForm = ({
                             <ButtonWithLoading
                                 type='submit'
                                 isLoading={loading}
-                                className="w-full"
+                                className="w-full cursor-pointer"
                                 disabled={loading}
                             >
                                 Login

@@ -1,10 +1,10 @@
 "use client"
 
 import Head from "next/head"
-import { ForgotPassForm } from "@/design-system/organisms/ForgotPassForm";
-import { useForm } from "@/hooks/useForm";
-import { ForgotPassForm as ForgotPassFormType } from "@/typdata/forgotPassForm";
+import { ForgotPassForm as ForgotPassFormType } from "@/typedata/auth/forgotPassForm";
 import { FormEventHandler, useState } from "react";
+import { useForm } from "@/hooks/use-form";
+import { ForgotPassForm } from "@/components/organism/ForgotPassFormV1";
 
 export default function PageClient({ }) {
     const { data, setData, submit, loading } = useForm<ForgotPassFormType>({
