@@ -1,11 +1,11 @@
 import PageClient from "./PageClient";
 import AuthenticatedLayout from "@/layout/server/AuthenticatedLayout";
 
-const ManageBlog = async () => {
+const CreateBlog = async () => {
     return (
         <AuthenticatedLayout>
             <PageClient />
         </AuthenticatedLayout>
     );
 };
-export default ManageBlog;
+export default CreateBlog;
