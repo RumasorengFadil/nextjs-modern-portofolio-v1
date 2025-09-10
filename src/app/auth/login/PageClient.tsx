@@ -22,7 +22,7 @@ export default function PageClient({ }) {
         e.preventDefault();
         submit("post", "api/login", {
             onSuccess: (res) => {
-                router.replace("/dashboard");
+                router.replace("/admin/dashboard");
                 setAuth(res.data.data);
             },
             onError: () => {
