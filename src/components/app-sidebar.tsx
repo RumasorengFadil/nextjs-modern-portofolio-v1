@@ -2,7 +2,6 @@ import * as React from "react"
 import {
   LayoutDashboardIcon,
   Newspaper,
-  Users,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -36,25 +35,25 @@ export function AppSidebar({ user, ...props }: AppSidebarProps) {
     navMain: [
       {
         title: "Dashboard",
-        url: "/dashboard",
+        url: "/admin/dashboard",
         icon: LayoutDashboardIcon,
         isActive: pathname.startsWith("/admin/dashboard"),
         show: user?.role === "admin" || user?.role === "author",
       },
       {
         title: "Manage Blog",
-        url: "/blog",
+        url: "/admin/manage-blog",
         icon: Newspaper,
-        isActive: pathname.startsWith("/admin/blog"),
+        isActive: pathname.startsWith("/admin/manage-blog"),
         show: user?.role === "admin" || user?.role === "author",
       },
-      {
-        title: "Manage Users",
-        url: "/users",
-        icon: Users,
-        isActive: pathname.startsWith("/admin/users"),
-        show: user?.role === "admin",
-      },
+      // {
+      //   title: "Manage Users",
+      //   url: "/users",
+      //   icon: Users,
+      //   isActive: pathname.startsWith("/admin/users"),
+      //   show: user?.role === "admin",
+      // },
     ],
   }
   return (

@@ -48,7 +48,7 @@ export function NavMain({
             <div key={i}>
               {item.show ? <Link href={item.url as Route}>
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton isActive={item.isActive} tooltip={item.title}>
+                  <SidebarMenuButton className="cursor-pointer" isActive={item.isActive} tooltip={item.title}>
                     {item.icon && <item.icon />}
                     <span>{item.title}</span>
                   </SidebarMenuButton>
