@@ -1,5 +1,6 @@
 import { Tag } from "./tag";
 
+
 export interface BlogTag {
     blog_id: string;
     tag: Tag

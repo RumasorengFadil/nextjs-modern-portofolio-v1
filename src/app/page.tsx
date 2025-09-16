@@ -1,69 +1,45 @@
-"use client"
-import AboutSection from '@/components/organism/AboutSectionV2'
-import TechStackSection from '@/components/organism/TechStackSectionV2'
-import LatestProject from '@/components/organism/LatestProjectSectionV1'
-import HeroSection from '@/components/organism/HeroSectionV2'
-import NavbarSection from '@/components/organism/NavbarSectionV1'
-import { CommandPrompt } from '@/components/organism/CommandPromptV1'
-import ExperienceSection from '@/components/organism/ExperienceSectionV2'
-import BlogPreviewSection from '@/components/organism/BlogPreviewSectionV1'
-import CtaSection from '@/components/organism/CtaSectionV1'
-import { FooterSection } from '@/components/organism/FooterSection'
-import PublicLayout from '@/layout/PublicLayout'
-import { FadeIn } from '@/components/motion/FadeIn'
-import Particles from '@/components/organism/Particles'
+import { Metadata } from "next";
+import PageClient from "./pageClient";
+import { cache } from "react";
 
-export default function HomePage() {
+export const metadata: Metadata = {
+  title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
+  description: "Bbyts adalah penyedia jasa pembuatan website profesional dan solusi digital untuk bisnis. Kami menawarkan layanan desain UI/UX, pengembangan website, serta portofolio online yang menarik dan fungsional. Kembangkan bisnis Anda dengan solusi digital terbaik dari Bbyts!",
+  keywords: "jasa pembuatan website, jasa website profesional, jasa desain UI/UX, solusi digital bisnis, pengembangan website, portofolio online, website murah berkualitas, pembuatan website startup",
+  robots: "index, follow",
+  openGraph: {
+    title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
+    description: "Bbyts adalah penyedia jasa pembuatan website profesional dan solusi digital untuk bisnis. Kami menawarkan layanan desain UI/UX, pengembangan website, serta portofolio online yang menarik dan fungsional. Kembangkan bisnis Anda dengan solusi digital terbaik dari Bbyts!",
+    url: "https://bbyts.com/",
+    type: "website",
+    images: [{
+      url: "https://bbyts.com/images/hero-banner.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Jasa Pembuatan Website & Solusi Digital - Bbyts"
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
+    description: "Dapatkan layanan pembuatan website profesional, desain UI/UX, dan solusi digital terbaik untuk bisnis Anda hanya di Bbyts!",
+    images: "https://bbyts.com/images/hero-banner.jpg",
+    site: "@bbyts",
+  }
+};
+
+const getBlog = cache(async function () {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/?sort=latest&limit=3`, {
+    next: {revalidate:3600}
+  });
+  return res.json();
+});
+
+export default async function Home() {
+  const blogs =( await getBlog()).data;
+
   return (
-    <PublicLayout >
-      {/* Navbar Section*/}
-      <NavbarSection />
-
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Experience Section */}
-      <FadeIn>
-        <ExperienceSection />
-      </FadeIn>
-
-      {/* Projects Section */}
-      <FadeIn>
-        <LatestProject />
-      </FadeIn>
-
-      {/* About Section */}
-      <FadeIn direction='right' >
-        <AboutSection />
-      </FadeIn>
-
-      {/* Skills Section */}
-      <FadeIn direction='left'>
-        <TechStackSection />
-      </FadeIn>
-
-
-      {/* Command Prompt */}
-      <CommandPrompt />
-
-      {/* Command Particles */}
-      <Particles
-        className="absolute inset-0 -z-10 animate-fade-in"
-        quantity={100}
-      />
-
-      {/* Blog Preview */}
-      <FadeIn>
-        <BlogPreviewSection />
-      </FadeIn>
-
-      {/* Contact CTA */}
-      <FadeIn>
-        <CtaSection />
-      </FadeIn>
-
-      {/* Footer */}
-      <FooterSection />
-    </PublicLayout >
+    <PageClient blogs={blogs} />
   )
 }
+

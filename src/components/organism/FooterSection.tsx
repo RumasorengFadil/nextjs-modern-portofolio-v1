@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export const FooterSection = () => {
     return <section
-        className="w-full border-t border-neutral/20 px-5 pt-5 pb-8 text-center text-white"
+        className="w-full border-t border-neutral/20 px-5 pt-5 pb-8 text-center text-foreground"
     >
         <ul className="mb-5 flex flex-wrap justify-center gap-x-5 text-xs">
             {

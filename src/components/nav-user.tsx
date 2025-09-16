@@ -83,14 +83,14 @@ export function NavUser({
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <Link href="/account">
+              <Link href="/admin/account">
                 <DropdownMenuItem className="cursor-pointer" onClick={() => { }} >
                   <UserCircleIcon />
                   Account
                 </DropdownMenuItem>
               </Link>
 
-              {user?.role === "admin" ? <Link href="/settings">
+              {user?.role === "admin" ? <Link href="/admin/settings">
                 <DropdownMenuItem className="cursor-pointer" onClick={() => { }}>
                   <Settings />
                   Settings

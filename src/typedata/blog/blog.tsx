@@ -12,6 +12,7 @@ export interface Blog {
     comments: Comment[],
     slug: string,
     content: string,
+    contentJSON: string,
     excerpt: string,
     status: string,
     thumbnail: string,

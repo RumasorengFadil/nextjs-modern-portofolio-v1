@@ -82,7 +82,7 @@ export default function BlogTable({ pagination, onDelete = () => { }, searchDefV
   };
 
   return (
-    <div className="px-4 lg:px-6">
+    <div className="">
       {/* Header Filter */}
       <div className="flex items-center py-4 gap-2">
         <form className="w-full" onSubmit={(e) => {
@@ -204,12 +204,12 @@ export default function BlogTable({ pagination, onDelete = () => { }, searchDefV
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
                       <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                      <Link href={`/blog/preview/${blog.id}`}>
+                      <Link href={`/admin/manage-blog/preview/${blog.id}`}>
                         <DropdownMenuItem className="cursor-pointer">
                           Preview
                         </DropdownMenuItem>
                       </Link>
-                      <Link href={`/blog/edit/${blog.id}`}>
+                      <Link href={`/admin/manage-blog/edit/${blog.id}`}>
                         <DropdownMenuItem className="cursor-pointer">Edit</DropdownMenuItem>
                       </Link>
                       <DropdownMenuItem

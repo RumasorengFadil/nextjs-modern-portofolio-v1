@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type Errors<T> = Partial<Record<keyof T, string>>;
 
-export function useForm<T extends Record<string, unknown>>(initialValues: T) {
+export function useForm<T extends Record<string, unknown> | object>(initialValues: T) {
     const [data, setData] = useState<T>(initialValues);
     const [errors, setErrors] = useState<Errors<T>>({});
     const [loading, setLoading] = useState(false);
@@ -15,6 +15,10 @@ export function useForm<T extends Record<string, unknown>>(initialValues: T) {
             [key]: value,
         }));
     };
+
+    const initialData = (data:T) => {
+        setData(data);
+    }
 
     const reset = (...fields: (keyof T)[]) => {
         fields.forEach(key => {
@@ -65,6 +69,7 @@ export function useForm<T extends Record<string, unknown>>(initialValues: T) {
     return {
         data,
         setData: updateField,
+        initialData,
         reset,
         errors,
         loading,

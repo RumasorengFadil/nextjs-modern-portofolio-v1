@@ -17,7 +17,7 @@ export default function HeroSection() {
                 <p className="mt-4 text-muted-foreground animate-fade-in">I am a Fullstack Developer who focuses on building modern web applications with high performance.</p>
 
                 <div className="mt-8 flex justify-center gap-3 animate-fade-in">
-                    <Button asChild size="lg"><Link href="/blog">See Blog</Link></Button>
+                    <Button asChild size="lg"><Link href="/explore">See Blog</Link></Button>
                     <Button asChild size="lg" variant="outline">
                         <Link href={`mailto:${siteConfig.email}`}>Get in Touch</Link>
                     </Button>
