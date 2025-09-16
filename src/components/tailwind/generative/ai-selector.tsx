@@ -24,7 +24,6 @@ interface AISelectorProps {
 
 export function AISelector({ onOpenChange }: AISelectorProps) {
   const { editor } = useEditor();
-  if(!editor) return;
 
   const [inputValue, setInputValue] = useState("");
 
@@ -43,6 +42,8 @@ export function AISelector({ onOpenChange }: AISelectorProps) {
   });
 
   const hasCompletion = completion.length > 0;
+
+  if(!editor) return;
 
   return (
     <Command className="w-[350px]">
