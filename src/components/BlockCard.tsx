@@ -1,8 +1,8 @@
 import { MessageCircle } from "lucide-react"
 import { format } from "date-fns"
 import Link from "next/link"
-import { Blog } from "@/typdata/blog"
 import Image from "next/image"
+import { Blog } from "@/typedata/blog/blog"
 
 export default function BlogCard({ post }: { post: Blog }) {
   return (
