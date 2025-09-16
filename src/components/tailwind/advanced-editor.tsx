@@ -118,7 +118,7 @@ const TailwindAdvancedEditor = ({
       </div>
       <EditorRoot>
         <EditorContent
-          initialContent={JSON.parse(data.contentJSON as string) as JSONContent || defaultEditorContent}
+          initialContent={data.contentJSON ? JSON.parse(data.contentJSON) as JSONContent : defaultEditorContent}
           extensions={extensions}
           className="relative"
           editorProps={{
