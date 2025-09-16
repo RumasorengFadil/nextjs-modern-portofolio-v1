@@ -3,7 +3,6 @@ import { Fragment, type ReactNode, useEffect } from "react";
 import { Button } from "../ui/button";
 import Magic from "../ui/icons/magic";
 import { AISelector } from "./ai-selector";
-import { Editor } from '@tiptap/core'
 
 interface GenerativeMenuSwitchProps {
   children: ReactNode;
@@ -12,9 +11,10 @@ interface GenerativeMenuSwitchProps {
 }
 const GenerativeMenuSwitch = ({ children, open, onOpenChange }: GenerativeMenuSwitchProps) => {
   const { editor } = useEditor();
+  if (!editor) return;
 
   useEffect(() => {
-    if (!open) removeAIHighlight(editor as Editor);
+    if (!open) removeAIHighlight(editor);
   }, [open]);
   return (
     <EditorBubble
@@ -22,7 +22,7 @@ const GenerativeMenuSwitch = ({ children, open, onOpenChange }: GenerativeMenuSw
         placement: open ? "bottom-start" : "top",
         onHidden: () => {
           onOpenChange(false);
-          editor?.chain().unsetHighlight().run();
+          editor.chain().unsetHighlight().run();
         },
       }}
       className="flex w-fit max-w-[90vw] overflow-hidden rounded-md border border-muted bg-background shadow-xl"

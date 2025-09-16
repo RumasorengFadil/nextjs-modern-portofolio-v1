@@ -15,8 +15,6 @@ import Magic from "../ui/icons/magic";
 import { ScrollArea } from "../ui/scroll-area";
 import AICompletionCommands from "./ai-completion-command";
 import AISelectorCommands from "./ai-selector-commands";
-import { Editor } from '@tiptap/core'
-
 //TODO: I think it makes more sense to create a custom Tiptap extension for this functionality https://tiptap.dev/docs/editor/ai/introduction
 
 interface AISelectorProps {
@@ -26,6 +24,8 @@ interface AISelectorProps {
 
 export function AISelector({ onOpenChange }: AISelectorProps) {
   const { editor } = useEditor();
+  if(!editor) return;
+
   const [inputValue, setInputValue] = useState("");
 
   const { completion, complete, isLoading } = useCompletion({
@@ -73,7 +73,7 @@ export function AISelector({ onOpenChange }: AISelectorProps) {
               onValueChange={setInputValue}
               autoFocus
               placeholder={hasCompletion ? "Tell AI what to do next" : "Ask AI to edit or generate..."}
-              onFocus={() => addAIHighlight(editor as Editor)}
+              onFocus={() => addAIHighlight(editor)}
             />
             <Button
               size="icon"
@@ -84,8 +84,8 @@ export function AISelector({ onOpenChange }: AISelectorProps) {
                     body: { option: "zap", command: inputValue },
                   }).then(() => setInputValue(""));
 
-                const slice = editor?.state.selection.content();
-                const text = editor?.storage.markdown.serializer.serialize(slice?.content);
+                const slice = editor.state.selection.content();
+                const text = editor.storage.markdown.serializer.serialize(slice.content);
 
                 complete(text, {
                   body: { option: "zap", command: inputValue },
@@ -98,7 +98,7 @@ export function AISelector({ onOpenChange }: AISelectorProps) {
           {hasCompletion ? (
             <AICompletionCommands
               onDiscard={() => {
-                editor?.chain().unsetHighlight().focus().run();
+                editor.chain().unsetHighlight().focus().run();
                 onOpenChange(false);
               }}
               completion={completion}

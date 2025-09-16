@@ -1,7 +1,7 @@
 import { ArrowDownWideNarrow, CheckCheck, RefreshCcwDot, StepForward, WrapText } from "lucide-react";
 import { getPrevText, useEditor } from "novel";
 import { CommandGroup, CommandItem, CommandSeparator } from "../ui/command";
-import { Editor as Editor$1 } from '@tiptap/core';
+
 const options = [
   {
     value: "improve",
@@ -31,15 +31,16 @@ interface AISelectorCommandsProps {
 
 const AISelectorCommands = ({ onSelect }: AISelectorCommandsProps) => {
   const { editor } = useEditor();
-
+  if (!editor) return;
+  
   return (
     <>
       <CommandGroup heading="Edit or review selection">
         {options.map((option) => (
           <CommandItem
             onSelect={(value) => {
-              const slice = editor?.state.selection.content();
-              const text = editor?.storage.markdown.serializer.serialize(slice?.content);
+              const slice = editor.state.selection.content();
+              const text = editor.storage.markdown.serializer.serialize(slice.content);
               onSelect(text, value);
             }}
             className="flex gap-2 px-4"
@@ -55,8 +56,8 @@ const AISelectorCommands = ({ onSelect }: AISelectorCommandsProps) => {
       <CommandGroup heading="Use AI to do more">
         <CommandItem
           onSelect={() => {
-            const pos = editor?.state.selection.from;
-            const text = getPrevText(editor as Editor$1, pos as number);
+            const pos = editor.state.selection.from;
+            const text = getPrevText(editor, pos);
             onSelect(text, "continue");
           }}
           value="continue"

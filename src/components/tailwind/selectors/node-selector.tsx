@@ -20,8 +20,8 @@ import { Popover } from "@radix-ui/react-popover";
 export type SelectorItem = {
   name: string;
   icon: LucideIcon;
-  command: (editor: ReturnType<typeof useEditor>["editor"]) => void;
-  isActive: (editor: ReturnType<typeof useEditor>["editor"]) => boolean;
+  command: (editor: NonNullable<ReturnType<typeof useEditor>["editor"]>) => void;
+  isActive: (editor: NonNullable<ReturnType<typeof useEditor>["editor"]>) => boolean;
 };
 
 const items: SelectorItem[] = [
@@ -90,7 +90,9 @@ interface NodeSelectorProps {
 export const NodeSelector = ({ open, onOpenChange }: NodeSelectorProps) => {
   const { editor } = useEditor();
   if (!editor) return null;
-  const activeItem = items.filter((item) => item.isActive(editor)).pop() ?? {
+
+  const safeEditor = editor;
+  const activeItem = items.filter((item) => item.isActive(safeEditor)).pop() ?? {
     name: "Multiple",
   };
 
