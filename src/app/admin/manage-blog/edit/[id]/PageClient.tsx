@@ -21,24 +21,7 @@ export default function PageClient({ }) {
     const { unsaved, setUnsaved } = useUnsavedChanges();
     const { id } = useParams();
 
-    useEffect(() => {
-        axiosClient(`api/blog/edit/${id}`).then(res => {
-            const blog = res.data.data.blog as Blog;
-            const categories = res.data.data.categories;
-
-            setData("id", blog.id);
-            setData("title", blog.title);
-            setData("tags", blog?.tags.map((tag: BlogTag) => tag.tag.name) || []);
-            setData("status", blog.status);
-            setData("content", blog.content);
-            setData("contentJSON", blog.contentJSON);
-            setData("categoryId", blog.category_id);
-            setData("image_url", blog?.image_url ? `${process.env.NEXT_PUBLIC_API_URL}${blog?.image_url}` : "");
-
-            setCategories(categories);
-        });
-    }, [id])
-
+    
     const { submit, setData, data } = useForm<BlogForm>({
         id: "",
         title: "",
@@ -58,19 +41,19 @@ export default function PageClient({ }) {
 
     const handleSave = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
+        
         submit("post", `/api/blog/update/${id}`, {
             onSuccess: (res: AxiosResponse) => {
                 router.replace(`/admin/manage-blog/edit/${res.data.data.id}`);
                 setUnsaved(false);
             }
         }, { headers: { "Content-Type": "multipart/form-data" } });
-
+        
     }
-
+    
     const handleDelete = (id: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
+        
         if (confirm("Are you sure you want to delete selected blogs?")) {
             submit("delete", `/api/blog/destroy/${id}`, {
                 onSuccess: () => {
@@ -81,9 +64,26 @@ export default function PageClient({ }) {
     }
     const handlePreview = (id: string) => (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-
+        
         router.push(`/admin/manage-blog/preview/${id}`);
     }
+    useEffect(() => {
+        axiosClient(`api/blog/edit/${id}`).then(res => {
+            const blog = res.data.data.blog as Blog;
+            const categories = res.data.data.categories;
+
+            setData("id", blog.id);
+            setData("title", blog.title);
+            setData("tags", blog?.tags.map((tag: BlogTag) => tag.tag.name) || []);
+            setData("status", blog.status);
+            setData("content", blog.content);
+            setData("contentJSON", blog.contentJSON);
+            setData("categoryId", blog.category_id);
+            setData("image_url", blog?.image_url ? `${process.env.NEXT_PUBLIC_API_URL}${blog?.image_url}` : "");
+
+            setCategories(categories);
+        });
+    }, [id])
 
     return <>
         {/* Header */}
