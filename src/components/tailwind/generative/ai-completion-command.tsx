@@ -1,6 +1,7 @@
 import { CommandGroup, CommandItem, CommandSeparator } from "../ui/command";
 import { useEditor } from "novel";
 import { Check, TextQuote, TrashIcon } from "lucide-react";
+import { Editor } from '@tiptap/core'
 
 const AICompletionCommands = ({
   completion,
@@ -17,7 +18,7 @@ const AICompletionCommands = ({
           className="gap-2 px-4"
           value="replace"
           onSelect={() => {
-            const selection = editor?.view.state.selection ?? {from:0, to:0};
+            const selection = (editor as Editor).view.state.selection;
 
             editor?.chain()
               .focus()
@@ -38,7 +39,7 @@ const AICompletionCommands = ({
           className="gap-2 px-4"
           value="insert"
           onSelect={() => {
-            const selection = editor?.view.state.selection ?? {from:0, to:0};
+            const selection = (editor as Editor).view.state.selection;
             editor?.chain()
               .focus()
               .insertContentAt(selection.to  + 1, completion)
