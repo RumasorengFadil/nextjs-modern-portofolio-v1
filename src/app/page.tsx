@@ -41,5 +41,5 @@ export default async function Home() {
   return (
     <PageClient blogs={blogs} />
   );
-};
+}
 
