@@ -42,7 +42,7 @@ export default function BlogExplore({
                     <div className="flex gap-2">
                         {blogs.tags?.map((tag) => {
                             return <div key={tag.id}>
-                                {Boolean(tag.blogs.length) &&
+                                {Boolean(tag.blogs?.length) &&
                                     <div className={`text-xs px-3 py-1 border  cursor-pointer rounded-full text-muted-foreground hover:bg-muted transition  ${blogs.tagSlug === tag.slug ? "bg-muted" : ""}`} onClick={(e) => onTagClick(e, tag.slug !== blogs.tagSlug ? tag.slug : "")} key={tag.id}>
                                         #{tag.name}
                                     </div>
