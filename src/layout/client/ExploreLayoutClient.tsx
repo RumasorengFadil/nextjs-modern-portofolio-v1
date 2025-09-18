@@ -1,20 +1,24 @@
 "use client"
 import ApplicationLogo from "@/components/ApplicationLogo";
 import { useAuthStore } from "@/store/use-auth-store";
+import { useTheme } from "@/store/use-theme";
+import { Sun } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
 export default function ExploreLayoutClient({ children }: { children: ReactNode }) {
     const { auth } = useAuthStore();
+    const { toggleTheme } = useTheme();
+
     return (
-        <div className="min-h-screen bg-white text-gray-900 font-sans antialiased">
+        <div className="min-h-screen font-sans antialiased">
             <header className="border-b">
                 <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                     <Link href="/explore" className="flex space-x-2 items-center text-xl font-bold tracking-tight">
                         <ApplicationLogo className="w-12 h-12" />
                         <span>Bbyts Blog</span>
                     </Link>
-                    <nav className="space-x-4 text-sm">
+                    <nav className="flex items-center space-x-4 text-sm">
                         <Link href="/" className="hover:underline">Home</Link>
                         <Link href="/explore" className="hover:underline">Explore</Link>
 
@@ -22,13 +26,14 @@ export default function ExploreLayoutClient({ children }: { children: ReactNode 
                             <Link href="/dashboard" className="hover:underline">Dashboard</Link> :
                             <Link href="/auth/login" className="hover:underline">Login</Link>
                         }
+                        <Sun onClick={toggleTheme} className="transform -scale-x-100 cursor-pointer animate-pulse text-yellow-500 dark:text-foreground" />
                         {/* <Link href="/about" className="hover:underline">Tentang</Link> */}
                         {/* <Link href="/contact" className="hover:underline">Kontak</Link> */}
                     </nav>
                 </div>
             </header>
 
-            <section className="bg-gray-50 py-16 border-b">
+            <section className="py-16 border-b">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl font-bold leading-tight mb-4 tracking-tight">
                         Wawasan & Cerita dari BBYTS

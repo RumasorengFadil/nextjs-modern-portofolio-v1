@@ -7,6 +7,7 @@ import { SubscribeForm } from "@/typedata/explore/subscribeForm"
 import SearchInput from "../SearchInput"
 import BlogCard from "../BlockCard"
 import BlogSidebar from "../BlogSidebar"
+import { Badge } from "../ui/badge"
 
 export default function BlogExplore({
     blogs,
@@ -38,18 +39,12 @@ export default function BlogExplore({
 
             {/* Tag */}
             <div>
-                <h3 className="text-sm font-medium text-gray-600 mb-2">{blogs.tags ? "Tag" : ""}</h3>
+                <h3 className="text-sm font-medium mb-2">{blogs.tags ? "Tag" : ""}</h3>
                 <ScrollArea className="whitespace-nowrap max-w-full">
                     <div className="flex gap-2">
                         {blogs.tags?.map((tag) => (
-                            <div onClick={(e) => onTagClick(e, tag.slug !== blogs.tagSlug ? tag.slug : "")} key={tag.id}>
-                                <Button
-                                    key={tag.id}
-                                    variant="ghost"
-                                    className={`text-sm text-gray-600 hover:text-black px-3 rounded-full border ${blogs.tagSlug === tag.slug ? "bg-muted" : ""}`}
-                                >
-                                    #{tag.name}
-                                </Button>
+                            <div className={`text-xs px-3 py-1 border  cursor-pointer rounded-full text-muted-foreground hover:bg-muted transition  ${blogs.tagSlug === tag.slug ? "bg-muted" : ""}`} onClick={(e) => onTagClick(e, tag.slug !== blogs.tagSlug ? tag.slug : "")} key={tag.id}>
+                                #{tag.name}
                             </div>
                         ))}
                     </div>

@@ -50,7 +50,7 @@ export default function BlogSidebar({
               <div
                 onClick={(e) => onCatClick(e, cat.slug !== blogs.catSlug ? cat.slug : "")}
                 key={cat.slug}
-                className={`text-xs px-3 py-1 border cursor-pointer rounded-full text-muted-foreground hover:bg-muted transition1 ${blogs.catSlug === cat.slug ? "bg-muted" : ""}`}
+                className={`text-xs px-3 py-1 border cursor-pointer rounded-full text-muted-foreground hover:bg-muted transition ${blogs.catSlug === cat.slug ? "bg-muted" : ""}`}
               >
                 {cat.name}
               </div>
