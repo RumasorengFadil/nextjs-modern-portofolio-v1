@@ -99,7 +99,6 @@ export default function PageClient({ data }: { data: BlogExploreData }) {
                 onSubscribe={handleSubscribe}
             />
         }
-
     </>
 }
 

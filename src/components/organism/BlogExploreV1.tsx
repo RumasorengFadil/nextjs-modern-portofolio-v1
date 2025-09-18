@@ -26,8 +26,7 @@ export default function BlogExplore({
 }) {
     const { posts, nextPageUrl } = blogs;
     return (
-        <div className="mb-12">
-            {/* <h2 className="text-2xl font-semibold mb-4">Eksplorasi</h2> */}
+        <div>
             <div className="max-w-3xl mb-6">
                 <h1 className="text-3xl font-bold mb-2">🧠 Eksplorasi Blog</h1>
                 <p className="text-muted-foreground mb-4">Temukan topik menarik dari Fadil Rumasoreng.</p>
@@ -65,7 +64,7 @@ export default function BlogExplore({
                             <button
                                 onClick={(e) => onLoadMore(e, blogs.nextPageUrl)}
                                 disabled={loading}
-                                className="text-sm px-6 py-2 border rounded-full hover:bg-gray-100 transition"
+                                className="text-sm px-6 py-2 border rounded-full text-foreground border-foreground/30 cursor-pointer hover:bg-muted transition"
                             >
                                 {loading ? "Memuat..." : "Load More"}
                             </button>

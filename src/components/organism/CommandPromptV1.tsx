@@ -76,6 +76,10 @@ export function CommandPrompt() {
               <ArrowRight />
               <span>Tech</span>
             </CommandItem>
+            <CommandItem onSelect={() => handleSelect("#posts")}>
+              <ArrowRight />
+              <span>Latest Posts</span>
+            </CommandItem>
           </CommandGroup>
         </CommandList>
       </CommandDialog>

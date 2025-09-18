@@ -19,9 +19,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-    typedRoutes: false, // opsional, bantu cek error pada route dinamis
-  },
+  typedRoutes: false,
   eslint: {
     ignoreDuringBuilds: false, // agar build tidak gagal hanya karena warning eslint
   },

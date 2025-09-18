@@ -24,6 +24,10 @@ export const metadata: Metadata = {
         locale: "id_ID",
         type: "website",
     },
+    robots: {
+        index:false,
+        follow:false
+    }
 };
 
 const Login = async () => {

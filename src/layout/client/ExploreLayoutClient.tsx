@@ -14,9 +14,9 @@ export default function ExploreLayoutClient({ children }: { children: ReactNode 
         <div className="min-h-screen font-sans antialiased">
             <header className="border-b z-50 bg-background">
                 <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-                    <Link href="/explore" className="flex space-x-2 items-center text-xl font-bold tracking-tight">
+                    <Link href="/explore" className="flex space-x-4 items-center text-xl font-bold tracking-tight">
                         <ApplicationLogo className="w-12 h-12" />
-                        <span>Bbyts Blog</span>
+                        <span>Rumasoreng Blog</span>
                     </Link>
                     <nav className="flex items-center space-x-4 text-sm">
                         <Link href="/" className="hover:underline">Home</Link>

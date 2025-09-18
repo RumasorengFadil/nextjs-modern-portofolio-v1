@@ -15,9 +15,8 @@ import ButtonLink from "@/components/molecule/ButtonLink"
 export default function PageClient({ }) {
     const [pagination, setPagination] = useState<Pagination<Blog> | null>(null);
     const params = useSearchParams();
-
     useEffect(() => {
-        axiosClient(`api/blogs?paginate=5${params ? `${params.toString()}` : ""}`).then(res => {
+        axiosClient(`api/blogs?paginate=5${params ? `&${params.toString()}` : ""}`).then(res => {
             setPagination(res.data.data);
             console.log(res.data.data);
         });
