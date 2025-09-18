@@ -45,7 +45,8 @@ export default function BlogTable({ pagination, onDelete = () => { }, searchDefV
 
   // Select state
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
-  const allSelected = selectedRows.length === blogs.length;
+
+  const allSelected = selectedRows?.length === blogs?.length;
 
   const router = useRouter();
   //Using usePage hooks

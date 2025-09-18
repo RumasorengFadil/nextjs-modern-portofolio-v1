@@ -30,13 +30,21 @@ export const metadata: Metadata = {
 
 const getBlog = cache(async function () {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/?sort=latest&limit=3`, {
-    next: {revalidate:3600}
+    next: { revalidate: 3600 },
+    headers: {
+      Accept: "application/json"
+    }
   });
+  if (!res.ok) {
+    console.error("Fetch failed:", res.status, await res.text());
+    throw new Error(`Failed to fetch blogs: ${res.status}`);
+  }
+
   return res.json();
 });
 
 export default async function Home() {
-  const blogs =( await getBlog()).data;
+  const blogs = (await getBlog()).data;
 
   return (
     <PageClient blogs={blogs} />

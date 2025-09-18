@@ -14,7 +14,7 @@ import { FadeIn } from '@/components/motion/FadeIn'
 import Particles from '@/components/organism/Particles'
 import { Blog } from '@/typedata/blog/blog'
 
-export default function PageClient({blogs}:{blogs:Blog[]}) {
+export default function PageClient({ blogs }: { blogs: Blog[] }) {
   return (
     <PublicLayout >
       {/* Navbar Section*/}
@@ -54,9 +54,11 @@ export default function PageClient({blogs}:{blogs:Blog[]}) {
       />
 
       {/* Blog Preview */}
-      <FadeIn>
-        <BlogPreviewSection blogs={blogs} />
-      </FadeIn>
+      {Boolean(blogs.length) &&
+        <FadeIn>
+          <BlogPreviewSection blogs={blogs} />
+        </FadeIn>
+      }
 
       {/* Contact CTA */}
       <FadeIn>
