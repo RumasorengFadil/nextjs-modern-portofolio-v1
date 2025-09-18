@@ -35,7 +35,7 @@ export default async function RootLayout({
   const theme = (await cookies()).get(themeConfig.cookieKey)?.value;
 
   return (
-    <html lang="en" className={theme || "dark"}>
+    <html lang="en" className={`${theme || "dark"} scroll-smooth`}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

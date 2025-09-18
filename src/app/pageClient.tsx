@@ -14,9 +14,6 @@ import { Blog } from '@/typedata/blog/blog'
 
 export default function PageClient({ blogs }: { blogs: Blog[] }) {
   return <>
-    {/* Navbar Section*/}
-    <NavbarSection />
-
     {/* Hero Section */}
     <HeroSection />
 

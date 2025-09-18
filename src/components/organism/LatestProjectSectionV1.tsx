@@ -6,7 +6,7 @@ import { projects } from "@/data/mock-posts-data"
 
 export default function LatestProject() {
     return (
-        <section className="container py-20 mx-auto">
+        <section id="projects" className="container py-20 mx-auto">
             <h2 className="text-4xl font-bold text-center">Latest Project</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2">
                 {projects.map((p) => (

@@ -2,8 +2,8 @@
 
 import * as React from "react"
 import {
+  ArrowRight,
   Calculator,
-  Calendar,
   CreditCard,
   Settings,
   Smile,
@@ -21,10 +21,11 @@ import {
   CommandShortcut,
 } from "@/components/ui/command"
 import { useCommandPrompt } from "@/store/use-command-prompt"
+import { useRouter } from "nextjs-toploader/app"
 
 export function CommandPrompt() {
-  const {open, setOpen} = useCommandPrompt();
-
+  const { open, setOpen } = useCommandPrompt();
+  const router = useRouter();
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -37,42 +38,43 @@ export function CommandPrompt() {
     return () => document.removeEventListener("keydown", down)
   }, [open, setOpen])
 
+  const handleSelect = (uri:string) => {
+    router.push(uri);
+    setOpen(!open);
+  }
   return (
     <>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Suggestions">
-            <CommandItem>
-              <Calendar />
-              <span>Calendar</span>
+          <CommandGroup heading="Pages">
+            <CommandItem onSelect={()=> handleSelect("/")}>
+              <ArrowRight />
+              <span>Home</span>
             </CommandItem>
-            <CommandItem>
-              <Smile />
-              <span>Search Emoji</span>
-            </CommandItem>
-            <CommandItem>
-              <Calculator />
-              <span>Calculator</span>
+            <CommandItem onSelect={() => handleSelect("/explore")}>
+              <ArrowRight />
+              <span>Explore</span>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
-          <CommandGroup heading="Settings">
-            <CommandItem>
-              <User />
-              <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
+          <CommandGroup heading="Suggestions">
+            <CommandItem onSelect={() => handleSelect("#experiences")}>
+              <ArrowRight />
+              <span>Experiences</span>
             </CommandItem>
-            <CommandItem>
-              <CreditCard />
-              <span>Billing</span>
-              <CommandShortcut>⌘B</CommandShortcut>
+             <CommandItem onSelect={() => handleSelect("#projects")}>
+              <ArrowRight />
+              <span>Projects</span>
             </CommandItem>
-            <CommandItem>
-              <Settings />
-              <span>Settings</span>
-              <CommandShortcut>⌘S</CommandShortcut>
+            <CommandItem onSelect={() => handleSelect("#about")}>
+              <ArrowRight />
+              <span>About</span>
+            </CommandItem>
+            <CommandItem onSelect={() => handleSelect("#tech")}>
+              <ArrowRight />
+              <span>Tech</span>
             </CommandItem>
           </CommandGroup>
         </CommandList>

@@ -16,7 +16,7 @@ export default function BlogCard({ post }: { post: Blog }) {
             <Image
               src={`${process.env.NEXT_PUBLIC_API_URL}${post.thumbnail}`}
               alt={post.title}
-              className="object-cover"
+              className="object-cover rounded-md"
               priority
               fill
             />

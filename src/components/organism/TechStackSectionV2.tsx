@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function TechStackSection () {
     return (
-        <section className="container py-20 mx-auto">
+        <section id="tech" className="container py-20 mx-auto">
         <h2 className="text-4xl font-bold text-center">Tech Stack</h2>
         <div className="mt-8 flex flex-wrap justify-center gap-16">
           <Image src="/icons/techstack/nextjs.svg" width={40} height={40} alt="techstack-nextjs" />

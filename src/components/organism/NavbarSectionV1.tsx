@@ -2,7 +2,6 @@ import { Sun } from "lucide-react";
 import { Badge } from "../ui/badge";
 import React from "react";
 import { useCommandPrompt } from "@/store/use-command-prompt";
-import { useTheme } from "@/store/use-theme";
 import { useThemeCookie } from "@/hooks/use-theme-cookie";
 
 export default function NavbarSection() {

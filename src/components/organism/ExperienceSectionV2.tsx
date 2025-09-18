@@ -3,7 +3,7 @@ import { CircleCheck } from "lucide-react"
 
 export default function ExperienceSection() {
     return (
-        <section className="container py-20 max-w-3xl mx-auto">
+        <section id="experiences" className="container py-20 max-w-3xl mx-auto">
             <h2
                 className="mb-14 text-4xl font-bold tracking-tighter md:text-5xl"
             >

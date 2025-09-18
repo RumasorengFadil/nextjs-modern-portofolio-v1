@@ -1,14 +1,14 @@
 "use client"
 import ApplicationLogo from "@/components/ApplicationLogo";
+import { useThemeCookie } from "@/hooks/use-theme-cookie";
 import { useAuthStore } from "@/store/use-auth-store";
-import { useTheme } from "@/store/use-theme";
 import { Sun } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 
 export default function ExploreLayoutClient({ children }: { children: ReactNode }) {
     const { auth } = useAuthStore();
-    const { toggleTheme } = useTheme();
+    const { toggleTheme } = useThemeCookie();
 
     return (
         <div className="min-h-screen font-sans antialiased">

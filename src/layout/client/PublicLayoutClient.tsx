@@ -1,6 +1,5 @@
 "use client"
 import NavbarSection from "@/components/organism/NavbarSectionV1";
-import Particles from "@/components/organism/Particles";
 
 
 export default function PublicLayoutClient({
