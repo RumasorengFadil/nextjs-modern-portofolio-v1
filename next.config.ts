@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-    images: {
+  reactStrictMode: true,
+  trailingSlash: true,
+  images: {
     remotePatterns: [
       {
         protocol: "https",
@@ -12,10 +14,19 @@ const nextConfig: NextConfig = {
         protocol: process.env.NEXT_PUBLIC_ENV === "local" ? "http" : "https",
         hostname:
           process.env.NEXT_PUBLIC_ENV === "local"
-            ? "localhost"
-            : "api.bbyts.com",
+            ? process.env.NEXT_PUBLIC_IMAGE_HOST ?? "localhost"
+            : process.env.NEXT_PUBLIC_IMAGE_HOST ?? "",
       },
     ],
+  },
+  experimental: {
+    typedRoutes: false, // opsional, bantu cek error pada route dinamis
+  },
+  eslint: {
+    ignoreDuringBuilds: false, // agar build tidak gagal hanya karena warning eslint
+  },
+  typescript: {
+    ignoreBuildErrors: false, // rekomendasi: biarkan error TS menghentikan build
   },
 };
 
