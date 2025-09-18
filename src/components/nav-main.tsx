@@ -31,7 +31,7 @@ export function NavMain({
               className="min-w-8 bg-primary text-primary-foreground duration-200 ease-linear hover:bg-primary/90 hover:text-primary-foreground active:bg-primary/90 active:text-primary-foreground"
             >
               <PlusCircleIcon />
-              <Link href={"/blog/create"} >Create New Blog</Link>
+              <Link href={"/admin/manage-blog/create"} >Create New Blog</Link>
             </SidebarMenuButton>
             {/* <Button
               size="icon"

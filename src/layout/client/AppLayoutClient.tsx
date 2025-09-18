@@ -1,9 +1,8 @@
 "use client"
-import NavbarSection from "@/components/organism/NavbarSectionV1";
 import Particles from "@/components/organism/Particles";
 
 
-export default function PublicLayoutClient({
+export default function AppLayoutClient({
     children,
 }: {
     children: React.ReactNode;
@@ -11,8 +10,11 @@ export default function PublicLayoutClient({
 
     return (
         <div>
-            {/* Navbar Section */}
-            <NavbarSection />
+            {/* Command Particles */}
+            <Particles
+                className="absolute inset-0 -z-50 animate-fade-in"
+                quantity={100}
+            />
 
             {/* Layout Children */}
             {children}

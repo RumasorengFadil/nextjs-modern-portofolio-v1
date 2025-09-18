@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import PageClient from "./pageClient";
 import { cache } from "react";
+import PublicLayout from "@/layout/server/PublicLayout";
+import AppLayout from "@/layout/server/AppLayout";
 
 export const metadata: Metadata = {
   title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
@@ -47,7 +49,11 @@ export default async function Home() {
   const blogs = (await getBlog()).data;
 
   return (
-    <PageClient blogs={blogs} />
+    <AppLayout>
+      <PublicLayout>
+        <PageClient blogs={blogs} />
+      </PublicLayout>
+    </AppLayout>
   );
 }
 

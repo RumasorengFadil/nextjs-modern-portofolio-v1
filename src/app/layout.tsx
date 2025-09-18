@@ -8,6 +8,8 @@ import { getAuthFromSever } from "@/lib/getAuthFromServer";
 import HydrateAuth from "@/components/hydrate/HydrateAuth";
 import { Suspense } from "react";
 import NextTopLoader from "nextjs-toploader";
+import { cookies } from "next/headers";
+import { themeConfig } from "@/config/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,14 +32,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const auth: Auth = await getAuthFromSever();
+  const theme = (await cookies()).get(themeConfig.cookieKey)?.value;
+
   return (
-    <html lang="en">
+    <html lang="en" className={theme || "dark"}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <HydrateToaster />
 
-        <HydrateTheme />
+        {/* <HydrateTheme /> */}
 
         <Suspense fallback={null}>
           <NextTopLoader color="var(--foreground)" height={2} />

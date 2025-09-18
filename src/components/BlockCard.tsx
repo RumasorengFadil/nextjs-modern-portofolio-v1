@@ -8,7 +8,7 @@ export default function BlogCard({ post }: { post: Blog }) {
   return (
     <Link
       href={`/explore/${post.slug}`}
-      className="group block rounded-xl border p-5 hover:shadow-md transition bg-white"
+      className="group block bg-background rounded-xl border p-5 hover:shadow-md hover:shadow-card-foreground/20 transition"
     >
       <div className="flex flex-col md:flex-row gap-5">
         {post.thumbnail && (
@@ -26,7 +26,7 @@ export default function BlogCard({ post }: { post: Blog }) {
 
         <div className="flex-1">
           {/* Title */}
-          <h2 className="text-2xl font-bold mb-2 group-hover:text-black text-gray-800 transition">
+          <h2 className="text-2xl font-bold mb-2 transition">
             {post.title}
           </h2>
 
@@ -41,7 +41,7 @@ export default function BlogCard({ post }: { post: Blog }) {
           </div>
 
           {/* Excerpt */}
-          <p className="text-sm text-gray-700 line-clamp-2 mb-2">
+          <p className="text-sm text-gray-500 line-clamp-2 mb-2">
             {post.excerpt}
           </p>
 

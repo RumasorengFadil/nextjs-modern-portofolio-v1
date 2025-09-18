@@ -3,11 +3,12 @@ import { Badge } from "../ui/badge";
 import React from "react";
 import { useCommandPrompt } from "@/store/use-command-prompt";
 import { useTheme } from "@/store/use-theme";
+import { useThemeCookie } from "@/hooks/use-theme-cookie";
 
 export default function NavbarSection() {
     const { toggleOpen } = useCommandPrompt();
 
-    const { toggleTheme } = useTheme();
+    const { toggleTheme } = useThemeCookie();
 
     return (
         // <nav className="fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur-md">

@@ -2,6 +2,7 @@ import axiosServer from "@/lib/axiosServer";
 import PageClient from "./PageClient";
 import { Metadata } from "next";
 import ExploreLayout from "@/layout/server/ExploreLayout";
+import AppLayout from "@/layout/server/AppLayout";
 
 export const revalidate = 60;
 
@@ -36,8 +37,10 @@ export default async function Explore({
     const res = await axiosServer.get(`/api/explore${queryString ? `?${queryString}` : ""}`);
 
     return (
-        <ExploreLayout>
-            <PageClient data={res.data.data} />
-        </ExploreLayout>
+        <AppLayout>
+            <ExploreLayout>
+                <PageClient data={res.data.data} />
+            </ExploreLayout>
+        </AppLayout>
     )
 }

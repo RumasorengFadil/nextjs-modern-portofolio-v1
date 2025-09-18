@@ -19,7 +19,6 @@ export default function BlogSidebar({
   onSubscibe: (e: React.FormEvent, subscribeForm?: SubscribeForm) => void
 }) {
   const [subscribeForm, setSubscribeForm] = useState<SubscribeForm>();
-
   return (
     <div className="space-y-6">
       {/* Populer */}
@@ -68,7 +67,7 @@ export default function BlogSidebar({
             className="space-y-2"
           >
             <Input onChange={(e) => setSubscribeForm({ email: e.target.value })} value={subscribeForm?.email ?? ""} type="email" name="email" placeholder="Email kamu" />
-            <ButtonWithLoading isLoading={loading} disabled={loading} type="submit" className="w-full">
+            <ButtonWithLoading isLoading={loading} disabled={loading} type="submit" className="w-full cursor-pointer">
               Langganan
             </ButtonWithLoading>
           </form>

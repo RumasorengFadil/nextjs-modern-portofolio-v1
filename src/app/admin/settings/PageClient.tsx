@@ -7,6 +7,7 @@ import axiosClient from "@/lib/axiosClient"
 import { SettingsTabs } from "@/components/organism/SettingsTabsV1"
 import { Settings } from "@/typedata/settings/settings"
 import { useImagePreview } from "@/hooks/use-image-preview"
+import { useThemeCookie } from "@/hooks/use-theme-cookie"
 
 
 export default function PageClient({ }) {
@@ -15,14 +16,14 @@ export default function PageClient({ }) {
         description: "",
         metaTitle: "",
         metaDescription: "",
-        commentsEnabled:false,
+        commentsEnabled: false,
         theme: "",
         logo: "",
         logoUrl: "",
         ogImage: "",
         ogImageUrl: "",
     });
-
+    const { setNewTheme } = useThemeCookie();
     useEffect(() => {
         axiosClient.get("/api/settings").then(res => {
             setForm({
@@ -34,9 +35,9 @@ export default function PageClient({ }) {
                 commentsEnabled: res.data.data.commentsEnabled || false,
                 theme: res.data.data.theme || "",
                 logoUrl: res.data.logo || "",
-                ogImageUrl: res.data.ogImage || "", 
+                ogImageUrl: res.data.ogImage || "",
                 logo: "",
-                ogImage: "", 
+                ogImage: "",
             });
         });
     }, []);
@@ -64,8 +65,7 @@ export default function PageClient({ }) {
             }}
             onSubmit={() => {
                 axiosClient.post("/api/settings/store", form, { headers: { "Content-Type": "multipart/form-data" } }).then(res => {
-                    console.log(res);
-                    // setSettings(res.data.data);
+                    setNewTheme(res.data.data.theme.toLowerCase());
                 });
             }}
 

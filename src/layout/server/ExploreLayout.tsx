@@ -5,7 +5,7 @@ import ExploreLayoutClient from "../client/ExploreLayoutClient";
 export default async function ExploreLayout({ children }: PropsWithChildren<{ children: ReactNode }>) {
     
     return <>
-        <ExploreLayoutClient >
+        <ExploreLayoutClient>
             {children}
         </ExploreLayoutClient>
     </>

@@ -12,7 +12,7 @@ export default function ExploreLayoutClient({ children }: { children: ReactNode 
 
     return (
         <div className="min-h-screen font-sans antialiased">
-            <header className="border-b">
+            <header className="border-b z-50 bg-background">
                 <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                     <Link href="/explore" className="flex space-x-2 items-center text-xl font-bold tracking-tight">
                         <ApplicationLogo className="w-12 h-12" />
@@ -22,9 +22,8 @@ export default function ExploreLayoutClient({ children }: { children: ReactNode 
                         <Link href="/" className="hover:underline">Home</Link>
                         <Link href="/explore" className="hover:underline">Explore</Link>
 
-                        {auth?.user ?
-                            <Link href="/dashboard" className="hover:underline">Dashboard</Link> :
-                            <Link href="/auth/login" className="hover:underline">Login</Link>
+                        {auth?.user &&
+                            <Link href="/admin/dashboard" className="hover:underline">Dashboard</Link>
                         }
                         <Sun onClick={toggleTheme} className="transform -scale-x-100 cursor-pointer animate-pulse text-yellow-500 dark:text-foreground" />
                         {/* <Link href="/about" className="hover:underline">Tentang</Link> */}
@@ -36,10 +35,10 @@ export default function ExploreLayoutClient({ children }: { children: ReactNode 
             <section className="py-16 border-b">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl font-bold leading-tight mb-4 tracking-tight">
-                        Wawasan & Cerita dari BBYTS
+                        Wawasan & Cerita dari Fadil Rumasoreng
                     </h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Temukan artikel, ide, dan teknologi terbaru yang kami bagikan untuk menginspirasi dan mengedukasi.
+                        Saya menulis tentang pengalaman membangun aplikasi, eksperimen teknologi, dan ide-ide seputar web development. Semua ini saya bagikan untuk membantu developer lain belajar lebih cepat dan tetap up-to-date.
                     </p>
                 </div>
             </section>
