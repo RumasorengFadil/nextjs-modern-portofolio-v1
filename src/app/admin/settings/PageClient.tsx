@@ -65,6 +65,7 @@ export default function PageClient({ }) {
             }}
             onSubmit={() => {
                 axiosClient.post("/api/settings/store", form, { headers: { "Content-Type": "multipart/form-data" } }).then(res => {
+                    if(!res.data.data.theme) return;
                     setNewTheme(res.data.data.theme.toLowerCase());
                 });
             }}
