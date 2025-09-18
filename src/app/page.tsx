@@ -5,30 +5,47 @@ import PublicLayout from "@/layout/server/PublicLayout";
 import AppLayout from "@/layout/server/AppLayout";
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
-  description: "Bbyts adalah penyedia jasa pembuatan website profesional dan solusi digital untuk bisnis. Kami menawarkan layanan desain UI/UX, pengembangan website, serta portofolio online yang menarik dan fungsional. Kembangkan bisnis Anda dengan solusi digital terbaik dari Bbyts!",
-  keywords: "jasa pembuatan website, jasa website profesional, jasa desain UI/UX, solusi digital bisnis, pengembangan website, portofolio online, website murah berkualitas, pembuatan website startup",
-  robots: "index, follow",
+  title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+  description:
+    "Website resmi Fadil Rumasoreng, berisi portofolio web development, artikel teknologi, dan insight seputar pemrograman. Temukan karya, pengalaman, serta catatan perjalanan dalam dunia coding dan digital kreatif.",
+  keywords: [
+    "Fadil Rumasoreng",
+    "Web Developer",
+    "Portfolio Web Developer",
+    "Blog Teknologi",
+    "Artikel Pemrograman",
+    "Belajar Coding",
+    "Frontend Developer",
+    "Backend Developer",
+    "Next.js",
+    "Laravel"
+  ],
   openGraph: {
-    title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
-    description: "Bbyts adalah penyedia jasa pembuatan website profesional dan solusi digital untuk bisnis. Kami menawarkan layanan desain UI/UX, pengembangan website, serta portofolio online yang menarik dan fungsional. Kembangkan bisnis Anda dengan solusi digital terbaik dari Bbyts!",
-    url: "https://bbyts.com/",
+    title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+    description:
+      "Jelajahi portofolio, artikel, dan catatan perjalanan Fadil Rumasoreng dalam dunia pemrograman dan teknologi web modern.",
+    url: "https://rumasoreng.com",
+    siteName: "Fadil Rumasoreng",
     type: "website",
-    images: [{
-      url: "https://bbyts.com/images/hero-banner.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Jasa Pembuatan Website & Solusi Digital - Bbyts"
-    }],
+    images: [
+      {
+        url: "https://rumasoreng.com/images/app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Fadil Rumasoreng - Web Developer, Blogger & Creator",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jasa Pembuatan Website & Solusi Digital Terbaik | Bbyts",
-    description: "Dapatkan layanan pembuatan website profesional, desain UI/UX, dan solusi digital terbaik untuk bisnis Anda hanya di Bbyts!",
-    images: "https://bbyts.com/images/hero-banner.jpg",
-    site: "@bbyts",
-  }
+    title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+    description:
+      "Website pribadi Fadil Rumasoreng berisi portofolio, artikel teknologi, dan catatan coding.",
+    images: ["https://rumasoreng.com/images/app/og-image.png"],
+    site: "@fadilrumasoreng", // ganti kalau kamu ada Twitter
+  },
 };
+
 
 const getBlog = cache(async function () {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/?sort=latest&limit=3`, {
