@@ -5,7 +5,7 @@ import ExploreLayout from "@/layout/server/ExploreLayout";
 
 export const revalidate = 60;
 
-const getBlog = cache(async function(slug: string) {
+const getBlog = cache(async function (slug: string) {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/explore/${slug}`, {
     });
     return res.json();
@@ -24,7 +24,7 @@ export async function generateMetadata({
         metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
         title: blog.title,
         description: blog.excerpt,
-        keyword: blog.tags.map(tag => tag.tag.name),
+        keywords: blog.tags.map(tag => tag.tag.name),
         openGraph: {
             title: blog.title,
             description: blog.excerpt,
@@ -37,6 +37,8 @@ export async function generateMetadata({
                     alt: blog.title,
                 },
             ],
+            type: "article",
+            locale: "id_ID",
         },
     };
 }

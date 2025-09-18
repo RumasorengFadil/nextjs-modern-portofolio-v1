@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     url: "https://rumasoreng.com",
     siteName: "Fadil Rumasoreng",
     type: "website",
+    locale: "id_ID",
     images: [
       {
         url: "https://rumasoreng.com/images/app/og-image.png",
