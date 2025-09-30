@@ -23,6 +23,11 @@ import {
   Youtube,
 } from "novel";
 
+import {Table} from "@tiptap/extension-table";
+import TableRow from "@tiptap/extension-table-row"
+import TableCell from "@tiptap/extension-table-cell"
+import TableHeader from "@tiptap/extension-table-header"
+
 import { cx } from "class-variance-authority";
 import { common, createLowlight } from "lowlight";
 
@@ -175,6 +180,10 @@ export const defaultExtensions = [
   mathematics,
   characterCount,
   TiptapUnderline,
+  Table,
+  TableHeader,
+  TableRow,
+  TableCell,
   // markdownExtension,
   HighlightExtension,
   TextStyle,

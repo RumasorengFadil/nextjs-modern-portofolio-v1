@@ -3,6 +3,7 @@
 @import "./app.css";
 @import "tailwindcss";
 @import "./prosemirror.css";
+@import "./prose.css";
 @plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:is(.dark *));
