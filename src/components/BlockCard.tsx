@@ -12,7 +12,7 @@ export default function BlogCard({ post }: { post: Blog }) {
     >
       <div className="flex flex-col md:flex-row gap-5">
         {post.thumbnail && (
-          <div className="relative w-full md:w-48 h-32 object-cover rounded-md">
+          <div className="relative w-full md:w-48 h-32 object-cover shadow-sm rounded-md">
             <Image
               src={`${process.env.NEXT_PUBLIC_API_URL}${post.thumbnail}`}
               alt={post.title}
