@@ -20,6 +20,7 @@ export async function generateMetadata({
 
     const blog: Blog = (await getBlog(slug)).data.blog;
 
+    console.log(blog);
     return {
         metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
         title: blog.title,
@@ -31,7 +32,7 @@ export async function generateMetadata({
             url: `/explore/${slug}`,
             images: [
                 {
-                    url: `${process.env.NEXT_PUBLIC_API_URL}${blog.thumbnail}`,
+                    url: `${process.env.NEXT_PUBLIC_API_URL}${blog.image_url}`,
                     width: 1200,
                     height: 630,
                     alt: blog.title,
