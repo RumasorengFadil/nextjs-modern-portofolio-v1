@@ -8,7 +8,7 @@ export default function RelatedBlogPosts({ blogs }: { blogs: Blog[] }) {
     return (
         <div className="mt-12 space-y-4">
             <h3 className="text-lg font-semibold">🧠 Artikel Terkait</h3>
-            <div className="grid md:grid-cols-2">
+            <div className="grid md:grid-cols-2 gap-8">
                 {blogs.map((blog: Blog) => (
                     <Link href={`/explore/${blog.slug}`} key={blog.id}>
                         <Card key={blog.id} className="flex overflow-hidden hover:shadow-md hover:shadow-card-foreground/20 py-0 gap-0">
