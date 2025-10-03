@@ -25,7 +25,7 @@ export default function PageClient({ blog, prevBlog, nextBlog, relatedBlogs }: {
     useEffect(() => {
         setData("blogId", blogData.id);
     }, []);
-
+    
     const handleSubmit: FormEventHandler = (e) => {
         e.preventDefault();
 
