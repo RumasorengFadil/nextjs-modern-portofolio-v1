@@ -1,3 +1,4 @@
+/* Default (Light Mode) */
 .prose table {
   border-collapse: collapse;
   width: 100%;
@@ -12,4 +13,21 @@
 .prose th {
   background-color: #f5f5f5;
   font-weight: bold;
+}
+
+/* Dark Mode */
+.dark .prose table,
+.dark .prose th,
+.dark .prose td {
+  border: 1px solid #333; /* lebih gelap */
+}
+
+.dark .prose th {
+  background-color: #222; /* header tabel gelap */
+  color: #f5f5f5; /* teks kontras */
+}
+
+.dark .prose td {
+  background-color: #111; /* isi tabel lebih gelap */
+  color: #ddd;
 }
