@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { HydrateTheme } from "@/components/hydrate/HydrateTheme";
+import Script from "next/script";
 import { HydrateToaster } from "@/components/hydrate/HydrateToaster";
 import { Auth } from "@/typedata/auth/auth";
 import { getAuthFromSever } from "@/lib/getAuthFromServer";
@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
- title: "Fadil Rumasoreng | Web Developer",
+  title: "Fadil Rumasoreng | Web Developer",
   description: "Website resmi Fadil Rumasoreng...",
   // icons: {
   //   icon: [
@@ -47,9 +47,22 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HydrateToaster />
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NWMRWT9Q4L"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NWMRWT9Q4L');
+          `}
+        </Script>
 
-        {/* <HydrateTheme /> */}
+        {/* Hydrate Toaster */}
+        <HydrateToaster />
 
         <Suspense fallback={null}>
           <NextTopLoader color="var(--foreground)" height={2} />
