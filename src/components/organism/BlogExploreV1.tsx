@@ -25,7 +25,6 @@ export default function BlogExplore({
     onLoadMore: (e: React.FormEvent, nextPageUrl: string) => void
 }) {
     const { posts, nextPageUrl } = blogs;
-    console.log(blogs)
 
     return (
         <div>
