@@ -24,16 +24,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fadil Rumasoreng | Web Developer",
   description: "Website resmi Fadil Rumasoreng...",
-
-  other: {
-    "application/ld+json": JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Fadil Rumasoreng",
-      "url": "https://www.rumasoreng.com",
-      "logo": "https://www.rumasoreng.com/icon.png",
-    }),
-  }
 };
 
 export default async function RootLayout({
@@ -47,6 +37,28 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${theme || "light"} scroll-smooth`}>
       <head>
+        {/* JSON-LD Schema (deteksi logo dan organisasi) */}
+        <Script
+          id="person-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Fadil Rumasoreng",
+              url: "https://www.rumasoreng.com",
+              logo: "https://www.rumasoreng.com/icon.png",
+              sameAs: [
+                "https://www.linkedin.com/in/fadil-hijayat-rumasoreng-4944671b9",
+                "https://github.com/RumasorengFadil",
+                "https://www.instagram.com/fadilrumasoreng/?hl=en",
+                "https://orcid.org/0009-0008-9016-4557",
+
+              ],
+            }),
+          }}
+        />
+
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
