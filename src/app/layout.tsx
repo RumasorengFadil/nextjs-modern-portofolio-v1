@@ -47,7 +47,7 @@ export default async function RootLayout({
               "@type": "Person",
               name: "Fadil Rumasoreng",
               url: "https://www.rumasoreng.com",
-              logo: "https://www.rumasoreng.com/icon.png",
+              image: "https://www.rumasoreng.com/icon.png",
               sameAs: [
                 "https://www.linkedin.com/in/fadil-hijayat-rumasoreng-4944671b9",
                 "https://github.com/RumasorengFadil",
@@ -59,6 +59,24 @@ export default async function RootLayout({
           }}
         />
 
+        {/* Schema: WebSite */}
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              url: "https://www.rumasoreng.com/",
+              name: "Fadil Rumasoreng",
+              author: {
+                "@type": "Person",
+                name: "Fadil Rumasoreng",
+              },
+            }),
+          }}
+        />
+        
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"
