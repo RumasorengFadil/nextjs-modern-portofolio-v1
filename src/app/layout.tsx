@@ -24,14 +24,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fadil Rumasoreng | Web Developer",
   description: "Website resmi Fadil Rumasoreng...",
-  // icons: {
-  //   icon: [
-  //     { url: "/favicon.ico" },
-  //     { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-  //     { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png" },
-  //   ],
-  //   apple: "/apple-touch-icon.png",
-  // },
+
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Fadil Rumasoreng",
+      "url": "https://www.rumasoreng.com",
+      "logo": "https://www.rumasoreng.com/icon.png",
+    }),
+  }
 };
 
 export default async function RootLayout({
