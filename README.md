@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/RumasorengFadil/nextjs-modern-portofolio-v1)](https://github.com/RumasorengFadil/nextjs-modern-portofolio-v1/issues)
 [![License](https://img.shields.io/github/license/RumasorengFadil/nextjs-modern-portofolio-v1)](./LICENSE)
 
-🚀 **Next.js Modern Portfolio v1** is a **modern portfolio** template based on **Next.js 14 App Router**, **Tailwind CSS v4**, **Framer Motion**, and **ShadCN UI**.  
+🚀 **Next.js Modern Portfolio v1** is a **modern portfolio** template based on **Next.js 15 App Router**, **Tailwind CSS v4**, **Framer Motion**, and **ShadCN UI**.  
 Suitable for **developers, freelancers, designers, and creators** who want to showcase their profile, projects, and experience with a **clean, responsive, and SEO-friendly** look.
 
 ---
