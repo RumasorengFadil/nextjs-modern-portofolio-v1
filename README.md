@@ -23,9 +23,9 @@ Suitable for **developers, freelancers, designers, and creators** who want to sh
 
 ## 📸 Demo
 
-🔗 **Live Demo:** [your-demo-link.com](https://your-demo-link.com)  
+🔗 **Live Demo:** [click here](https://www.rumasoreng.com/)  
 
-![Preview Screenshot](./public/preview.png)
+![Preview Screenshot](./public/images/common/preview-screenshoot.png)
 
 ---
 
