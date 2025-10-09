@@ -56,11 +56,11 @@ export default function PageClient({ blog, prevBlog, nextBlog, relatedBlogs }: {
             </div>
 
             {blogData.image_url && (
-                <div className="relative w-full h-96 object-cover mb-6">
+                <div className="relative w-full h-60 sm:h-96 object-cover mb-6">
                     <Image
                         src={`${process.env.NEXT_PUBLIC_API_URL}${blogData.image_url}`}
                         alt={blogData.title}
-                        className="object-cover rounded-lg"
+                        className="object-cover rounded-md"
                         priority
                         fill
                     />
