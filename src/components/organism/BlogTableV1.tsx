@@ -167,7 +167,7 @@ export default function BlogTable({ pagination, onDelete = () => { }, searchDefV
                   />
                 </TableCell>
                 {visibleColumns.includes("title") && (
-                  <TableCell>{blog.title}</TableCell>
+                  <TableCell className="max-w-64 truncate">{blog.title}</TableCell>
                 )}
                 {visibleColumns.includes("author") && (
                   <TableCell>{blog.user.name}</TableCell>
