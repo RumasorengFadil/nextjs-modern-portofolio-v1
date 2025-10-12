@@ -29,7 +29,7 @@ export default function BlogExplore({
     return (
         <div>
             <div className="max-w-3xl mb-6">
-                <h1 className="text-3xl font-bold mb-2">🧠 Eksplorasi Blog</h1>
+                <h1 className="text-3xl font-bold mb-2">Eksplorasi Blog</h1>
                 <p className="text-muted-foreground mb-4">Temukan topik menarik dari Fadil Rumasoreng.</p>
 
                 <SearchInput onSearch={onSearch} defaultValue={blogs.searchKey} />
