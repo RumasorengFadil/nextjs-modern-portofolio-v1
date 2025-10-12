@@ -37,6 +37,10 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${theme || "light"} scroll-smooth`}>
       <head>
+        {/* Additional meta for PWAs */}
+        <meta name="apple-mobile-web-app-title" content="Rumasoreng" />
+        <meta name="application-name" content="Rumasoreng" />
+
         {/* JSON-LD Schema (deteksi logo dan organisasi) */}
         <Script
           id="person-schema"
@@ -76,7 +80,7 @@ export default async function RootLayout({
             }),
           }}
         />
-        
+
         {/* Google Tag Manager */}
         <Script
           id="google-tag-manager"

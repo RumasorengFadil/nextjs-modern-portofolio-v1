@@ -23,7 +23,7 @@ export default function CommentsSection({
   const { comments } = blog;
   return (
     <div className="space-y-6 mt-12">
-      <h3 className="text-lg font-semibold">💬 Komentar</h3>
+      <h3 className="text-lg font-semibold">Komentar</h3>
 
       {/* Komentar Form */}
       <Card>
