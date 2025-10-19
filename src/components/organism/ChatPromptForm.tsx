@@ -57,6 +57,12 @@ export const ChatPromptForm = (
     }
     const handleOpen = () => {
         setOpen(!open);
+
+        if (!open) {
+            document.body.style.overflow = "hidden"; // ❌ Nonaktifkan scroll di body
+        } else {
+            document.body.style.overflow = "auto";   // ✅ Aktifkan lagi
+        }
     }
     const handleChat = (e: React.FormEvent<HTMLFormElement>, question: string) => {
         e.preventDefault();
