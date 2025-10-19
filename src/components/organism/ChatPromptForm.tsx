@@ -61,7 +61,6 @@ export const ChatPromptForm = (
     const handleChat = (e: React.FormEvent<HTMLFormElement>, question: string) => {
         e.preventDefault();
 
-        if (!question.trim() || !streamDone) return;
 
         if (!open) {
             handleOpen();
@@ -83,7 +82,7 @@ export const ChatPromptForm = (
                 </div>
 
                 <div className={`absolute top-1/2 p-1 -translate-y-1/2 right-2 `}>
-                    <Button className={`w-7 h-7 cursor-pointer flex bg-foreground text-background rounded-full ${!question.trim() ? "bg-foreground/40 hover:bg-foreground/40 cursor-auto" : ""}`}>
+                    <Button disabled={!question.trim()} className={`w-7 h-7 cursor-pointer flex bg-foreground text-background rounded-full`}>
                         <ArrowUp />
                     </Button>
                 </div>
@@ -115,11 +114,11 @@ export const ChatPromptForm = (
             </div>
 
             <div className="flex flex-col h-full">
-                <div className="flex flex-col space-y-8 p-4 h-full overflow-auto mb-28">
+                <div className="flex flex-col p-4 h-full overflow-auto mb-28">
                     {messages.map(({ message, question }, i) => {
                         return <div className="flex flex-col gap-4" key={i} >
                             <div className="flex flex-col space-y-4">
-                                <div className="flex items-center justify-end">
+                                <div className="flex items-center justify-end prose prose-sm dark:prose-invert max-w-none">
                                     <p className="flex items-end justify-end bg-muted p-2 rounded-md w-max ">
                                         <span>{question}</span>
                                     </p>
@@ -134,6 +133,7 @@ export const ChatPromptForm = (
                                     </ReactMarkdown>
 
                                 </div>
+
                             </div>
                             <div onClick={() => handleCopy(message)} className="p-1 cursor-pointer rounded-md w-max hover:bg-muted">
                                 {copied ? <Check className="w-4 h-4 text-muted-foreground" /> : <Copy className="w-4 h-4 text-muted-foreground" />}
@@ -141,23 +141,43 @@ export const ChatPromptForm = (
                         </div>
                     })}
 
-                    {streamMessage ? <div className="flex flex-col space-y-4">
-                        <p className="text-right">
-                            <span className="bg-muted rounded-md p-2">{question}</span>
-                        </p>
+                    <div className="flex flex-col space-y-4">
 
-                        <p>{streamMessage}</p>
-                    </div> : streamDone ? "" : <div className="flex">Thinking<StaggerText repeat={true} text="..." /></div>}
+                        {!streamDone &&
+                            <>
+                                <div className="prose prose-sm dark:prose-invert max-w-none">
+                                    <div className="flex items-center justify-end prose prose-sm dark:prose-invert max-w-none">
+                                        <p className="flex items-end justify-end bg-muted p-2 rounded-md w-max ">
+                                            <span>{question}</span>
+                                        </p>
+                                    </div>
+                                    <div className="flex">Generating<StaggerText repeat={true} text="..." /></div>
+                                </div>
+                            </>
+                        }
+
+
+                        {streamMessage &&
+                            <div className="prose prose-sm dark:prose-invert max-w-none">
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm]}
+
+                                >
+                                    {streamMessage}
+                                </ReactMarkdown>
+                            </div>
+                        }
+                    </div>
                 </div>
 
                 <form onSubmit={(e) => handleChat(e, question)}>
                     <div className={`absolute px-4 bottom-4 left-1/2 -translate-x-1/2 w-full transition-all duration-500 `}>
                         <div className='bg-background dark:bg-background'>
-                            <Input value={question} onChange={(e) => setQuestion(e.target.value)} className="py-5 pl-4 pr-12" type="text" placeholder="Ask a question..." />
+                            <Input disabled={!streamDone} value={question} onChange={(e) => setQuestion(e.target.value)} className="py-5 pl-4 pr-12" type="text" placeholder="Ask a question..." />
                         </div>
 
                         <div className={`absolute top-1/2 p-1 -translate-y-1/2 right-6 `}>
-                            <Button className={`w-7 h-7 cursor-pointer flex bg-foreground text-background rounded-full ${!question.trim() || !streamDone ? "bg-foreground/40 hover:bg-foreground/40 cursor-auto" : ""}`}>
+                            <Button disabled={!question.trim() || !streamDone} className={`w-7 h-7 cursor-pointer flex bg-foreground text-background rounded-full`}>
                                 <ArrowUp />
                             </Button>
                         </div>
