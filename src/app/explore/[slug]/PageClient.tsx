@@ -69,7 +69,7 @@ export default function PageClient({ blog, prevBlog, nextBlog, relatedBlogs }: {
             <div />
 
             {/* Content */}
-            <Card className="prose prose-neutral dark:prose-invert max-w-none border-none shadow-none bg-transparent">
+            <Card className="prose prose-neutral font-dyslexic dark:prose-invert max-w-none border-none shadow-none bg-transparent">
                 <CardContent className="p-0">
                     <div
                         dangerouslySetInnerHTML={{

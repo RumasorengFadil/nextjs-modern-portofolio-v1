@@ -1,0 +1,22 @@
+[
+  {
+    "topic": "about",
+    "content": "Fadil Rumasoreng adalah seorang Fullstack Developer kelahiran 2003 dan lulusan Telkom University jurusan Sistem Informasi. Ia berfokus pada pengembangan aplikasi web modern dengan performa tinggi dan pengalaman pengguna yang baik. Fadil menguasai Laravel, Next.js, React, TypeScript, dan Tailwind CSS, serta terbiasa menggunakan shadcn/ui dan GitHub dalam workflow pengembangannya."
+  },
+  {
+    "topic": "work_experience",
+    "content": "Fadil memiliki pengalaman bekerja di beberapa perusahaan teknologi, antara lain: di PT Abhiparaya Mahardika sebagai Web Developer (Mei 2018 — Sept 2020) di mana ia membangun platform blog modern dengan Laravel dan Next.js, mengimplementasikan CMS dinamis, serta mengintegrasikan Google Analytics; di PT Cazh Technology (Jul — Okt 2024) sebagai Web Developer yang mengembangkan sistem manajemen perpustakaan berbasis web menggunakan Laravel, React, dan Inertia.js; serta mengikuti Bangkit Academy by Google, Tokopedia, Gojek, & Traveloka (Ags 2023 — Jan 2024) sebagai Android Developer yang mempelajari pengembangan aplikasi Kotlin dengan arsitektur MVVM."
+  },
+  {
+    "topic": "project",
+    "content": "Fadil juga mengembangkan berbagai proyek seperti Sistem POS UMKM (aplikasi kasir dan pembukuan berbasis web dengan Laravel + React), serta Modern CMS Company Profile (website profil perusahaan menggunakan Next.js, Laravel, Tailwind, dan shadcn/ui). Ia juga mendirikan bbyts, perusahaan digital yang menaungi beberapa layanan seperti Blio (marketplace portofolio), BPOS (mobile point of sale), dan layanan desain UI/UX."
+  },
+  {
+    "topic": "goal",
+    "content": "Tujuan Fadil adalah membangun ekosistem layanan digital yang mempermudah bisnis, sekolah, dan pesantren dalam melakukan transformasi digital. Ia berkomitmen untuk mengembangkan solusi teknologi yang efisien, mudah digunakan, dan memberikan dampak positif bagi pengguna."
+  },
+  {
+    "topic": "contact",
+    "content": "Instagram: https://www.instagram.com/fadilrumasoreng/?hl=en | WhatsApp: 085244682780 | GitHub: https://github.com/RumasorengFadil | Email: fadilhijayatrumasoreng@gmail.com"
+  }
+]
