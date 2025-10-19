@@ -77,8 +77,8 @@ export const ChatPromptForm = (
                 handleOpen();
             }
         }} className={`${open ? "opacity-0 pointer-events-none" : "opacity-100"}`} onSubmit={(e) => handleChat(e, question)}>
-            <div className={`fixed max-w-72 w-full bottom-0 left-1/2 animate-fade-in -translate-x-1/2 transition-all duration-500  hover:scale-105 sm:focus-within:max-w-96 sm:focus-within:scale-105 ${hidden ? "translate-y-full" : "-translate-y-4"}`}>
-                <div className='bg-background dark:bg-background'>
+            <div className={`group fixed max-w-72 w-full bottom-0 left-1/2 animate-fade-in -translate-x-1/2 transition-all duration-500  hover:scale-105 sm:focus-within:max-w-96 sm:focus-within:scale-105 ${hidden ? "translate-y-full" : "-translate-y-4"}`}>
+                <div className='bg-background dark:bg-background group-focus:-translate-y-4'>
                     <Input value={question} onChange={(e) => setQuestion(e.target.value)} className="py-5 pl-4 pr-12" type="text" placeholder="Ask a question..." />
                 </div>
 
