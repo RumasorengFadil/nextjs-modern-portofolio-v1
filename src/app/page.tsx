@@ -5,25 +5,23 @@ import PublicLayout from "@/layout/server/PublicLayout";
 import AppLayout from "@/layout/server/AppLayout";
 
 export const metadata: Metadata = {
-  title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+  title: "Fadil Rumasoreng — Fullstack Web Developer Next.js & Laravel | Modern, Scalable & SEO-Optimized Web Apps",
   description:
-    "Website resmi Fadil Rumasoreng, berisi portofolio web development, artikel teknologi, dan insight seputar pemrograman. Temukan karya, pengalaman, serta catatan perjalanan dalam dunia coding dan digital kreatif.",
+    "Saya adalah seorang Fullstack Web Developer yang berfokus pada pengembangan aplikasi web modern dengan Next.js & Laravel. Saya membantu bisnis membangun solusi digital yang cepat, aman, skalabel, dan SEO-friendly. Jelajahi portofolio saya dan temukan bagaimana saya dapat membantu proyek Anda.",
   keywords: [
-    "Fadil Rumasoreng",
-    "Web Developer",
-    "Portfolio Web Developer",
-    "Blog Teknologi",
-    "Artikel Pemrograman",
-    "Belajar Coding",
-    "Frontend Developer",
-    "Backend Developer",
-    "Next.js",
-    "Laravel"
+    "Fullstack Web Developer Indonesia",
+    "Jasa Pembuatan Website Next.js Laravel",
+    "Portofolio Fadil Rumasoreng",
+    "Belajar Web Development Modern",
+    "Frontend Backend Developer Remote",
+    "Next.js Developer Indonesia",
+    "Laravel Developer Freelancer",
+    "Jasa Pembuatan Website SEO Friendly"
   ],
   openGraph: {
-    title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+    title: "Fadil Rumasoreng — Fullstack Web Developer Next.js & Laravel | Modern, Scalable & SEO-Optimized Web Apps",
     description:
-      "Jelajahi portofolio, artikel, dan catatan perjalanan Fadil Rumasoreng dalam dunia pemrograman dan teknologi web modern.",
+      "Saya adalah seorang Fullstack Web Developer yang berfokus pada pengembangan aplikasi web modern dengan Next.js & Laravel. Saya membantu bisnis membangun solusi digital yang cepat, aman, skalabel, dan SEO-friendly. Jelajahi portofolio saya dan temukan bagaimana saya dapat membantu proyek Anda.",
     url: "https://rumasoreng.com",
     siteName: "Fadil Rumasoreng",
     type: "website",
@@ -39,11 +37,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fadil Rumasoreng | Web Developer, Blogger, Creator & Lecturer",
+    title: "Fadil Rumasoreng — Fullstack Web Developer Next.js & Laravel | Modern, Scalable & SEO-Optimized Web Apps",
     description:
-      "Website pribadi Fadil Rumasoreng berisi portofolio, artikel teknologi, dan catatan coding.",
+      "Saya adalah seorang Fullstack Web Developer yang berfokus pada pengembangan aplikasi web modern dengan Next.js & Laravel. Saya membantu bisnis membangun solusi digital yang cepat, aman, skalabel, dan SEO-friendly. Jelajahi portofolio saya dan temukan bagaimana saya dapat membantu proyek Anda.",
     images: ["https://rumasoreng.com/images/app/og-image.png"],
     site: "@fadilrumasoreng", // ganti kalau kamu ada Twitter
+  },
+  alternates: {
+    canonical: "https://rumasoreng.com",
   },
 };
 

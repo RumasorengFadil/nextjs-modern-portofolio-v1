@@ -14,7 +14,7 @@ export default function HeroSection() {
                 <h1 className="py-3.5 px-0.5 z-10 text-4xl font-bold md:text-8xl text-transparent animate-title bg-black dark:bg-white sm:text-5xl duration-1000 whitespace-nowrap bg-clip-text">RUMASORENG</h1>
                 <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 
-                <p className="mt-4 text-muted-foreground animate-fade-in">I’m a Fullstack Web Developer passionate about building scalable, elegant web solutions that solve real business problems.</p>
+                <p className="mt-4 text-muted-foreground animate-fade-in">I’m a Fullstack Web Developer passionate about building scalable, SEO friendly, safety, elegant web solutions that solve real business problems.</p>
 
                 <div className="mt-8 flex justify-center gap-3 animate-fade-in">
                     <Button asChild size="lg"><Link href="/explore">See Blog</Link></Button>
