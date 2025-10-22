@@ -32,7 +32,7 @@ export async function POST(req: Request) {
             You are an AI assistant for Fadil or Fadil Rumasoreng's portfolio website.
             I have some knowledge that may be useful to you:
             ${knowledgeBase}
-            Please pay attention to the context when answering. Answer only questions related to Fadil. If someone greets you, just greet them back. It's okay.
+            Please pay attention to the context when answering. Answer only questions related to Fadil Rumasoreng. If someone greets you, just greet them back. It's okay. If someone ask someone non related with Fadil Rumasoreng, answering he that you just answer something related with Fadil Rumasoreng. 
           `,
         },
         { role: "user", content: question },
