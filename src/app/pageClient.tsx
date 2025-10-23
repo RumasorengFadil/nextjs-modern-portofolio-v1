@@ -12,8 +12,9 @@ import { FadeIn } from '@/components/motion/FadeIn'
 import { Blog } from '@/typedata/blog/blog'
 import { useChat } from '@/hooks/use-chat'
 import { ChatPromptForm } from '@/components/organism/ChatPromptForm'
+import { Pagination } from '@/typedata/pagination/pagination'
 
-export default function PageClient({ blogs }: { blogs: Blog[] }) {
+export default function PageClient({ pagination }: { pagination: Pagination<Blog> }) {
   const { handleChat, streamMessage, messages, streamDone, clearChat } = useChat();
   return <>
     {/* Hero Section */}
@@ -43,9 +44,9 @@ export default function PageClient({ blogs }: { blogs: Blog[] }) {
     <CommandPrompt />
 
     {/* Blog Preview */}
-    {Boolean(blogs.length) &&
+    {Boolean(pagination.data.length) &&
       <FadeIn>
-        <BlogPreviewSection blogs={blogs} />
+        <BlogPreviewSection blogs={pagination.data} />
       </FadeIn>
     }
 

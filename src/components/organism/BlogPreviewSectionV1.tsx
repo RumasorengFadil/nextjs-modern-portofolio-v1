@@ -1,4 +1,3 @@
-import { posts } from "@/data/mock-posts-data";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -16,8 +15,7 @@ export default function BlogPreviewSection({blogs}:{blogs:Blog[]}) {
                                 className="hover:underline">{b.title}</Link></CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="line-clamp-3 text-muted-foreground">{b.excerpt}</
-                            p>
+                            <p className="line-clamp-3 text-muted-foreground">{b.excerpt}</p>
                         </CardContent>
                     </Card>
                 ))}

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 
 const getBlog = cache(async function () {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/?sort=latest&limit=3`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/?sort=latest&paginate=3`, {
     next: { revalidate: 3600 },
     headers: {
       Accept: "application/json"
@@ -66,11 +66,10 @@ const getBlog = cache(async function () {
 
 export default async function Home() {
   const blogs = (await getBlog()).data;
-
   return (
     <AppLayout>
       <PublicLayout>
-        <PageClient blogs={blogs} />
+        <PageClient pagination={blogs} />
       </PublicLayout>
     </AppLayout>
   );
