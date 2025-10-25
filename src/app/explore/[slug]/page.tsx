@@ -20,12 +20,12 @@ export async function generateMetadata({
 
     const blog: Blog = (await getBlog(slug)).data.blog;
 
-    console.log(blog);
     return {
         metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
         title: blog.title,
         description: blog.excerpt,
         keywords: blog.tags.map(tag => tag.tag.name),
+        robots: "index, follow",
         openGraph: {
             title: blog.title,
             description: blog.excerpt,
