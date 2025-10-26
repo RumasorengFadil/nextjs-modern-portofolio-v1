@@ -8,26 +8,37 @@ export const skills = [
 export const projects = [
   {
     id: "1",
-    title: "Sistem POS UMKM",
+    title: "Wadon Firly POS & Accounting Website",
     description:
       "Web-based cashier and accounting application with Laravel + React.",
     image: "/images/project/project-2.png",
     link: "https://wadonfirly.my.id/",
+    source: "https://github.com/RumasorengFadil/Point-of-Sale-Application"
   },
   {
     id: "2",
-    title: "Modern CMS Company Profile",
+    title: "Bbyts Company Profile Website with Integrated Blog System",
     description:
-      "Company Profile Webiste with Next.js, Laravel, Tailwind, shadcn/ui.",
+    "Company Profile Webiste with Next.js, Laravel, Tailwind, shadcn/ui.",
     image: "/images/project/project-3.png",
     link: "https://www.bbyts.com/",
+    source: "",
   },
   {
     id: "3",
-    title: "Modern CMS Company Profile",
-    description: "Company Profile Website with Laravel, React.js, Tailwind",
-    image: "/images/project/project-4.png",
-    link: "https://www.brajatama.com/",
+    title: "Rotanademi Company Profile",
+    description: "Company Profile Website with NextJs",
+    image: "/images/project/rotanademy-hero-section.png",
+    link: "https://www.rotanademi.co.id/",
+    source: "",
+  },
+  {
+    id: "4",
+    title: "Cazh Library Management System",
+    description: "A modern and simple Library Management System that can manage memberships, circulation, and bibliographies.",
+    image: "/images/project/library-management-system-1.png",
+    link: "https://www.rotanademi.co.id/",
+    source: "https://github.com/RumasorengFadil/calms",
   },
 ];
 export const experience = [

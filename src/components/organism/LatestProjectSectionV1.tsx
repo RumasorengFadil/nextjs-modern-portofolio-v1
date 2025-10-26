@@ -3,6 +3,7 @@ import { Button } from "../ui/button"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { projects } from "@/data/mock-posts-data"
+import { ArrowUpRight, Lock } from "lucide-react"
 
 export default function LatestProject() {
     return (
@@ -17,10 +18,25 @@ export default function LatestProject() {
                         <CardHeader>
                             <CardTitle>{p.title}</CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="flex flex-col gap-4">
                             <p className="text-muted-foreground">{p.description}</p>
-                            <Button asChild size="sm" className="mt-4"><Link href={p.link} target="__blank"
-                            >Detail</Link></Button>
+
+                            <div className="flex items-center gap-4">
+                                <Button asChild size="sm"><Link href={p.link} target="__blank"
+                                >Preview</Link></Button>
+                                {!p.source ? <>
+                                    <span className="flex items-center text-gray-300 cursor-auto gap-1 font-semibold">
+                                        <Lock size={16} />
+                                        Privacy
+                                    </span>
+                                </> : <>
+                                    <Link href={p.source} className="flex items-center cursor-pointer gap-1 font-semibold">
+                                        <ArrowUpRight />
+                                        Source
+                                    </Link>
+                                </>}
+
+                            </div>
                         </CardContent>
                     </Card>
                 ))}
