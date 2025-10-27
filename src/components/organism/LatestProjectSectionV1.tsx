@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { projects } from "@/data/mock-posts-data"
 import { ArrowUpRight, Lock } from "lucide-react"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel"
 
 export default function LatestProject() {
     return (
@@ -12,13 +13,27 @@ export default function LatestProject() {
             <div className="mt-8 grid gap-6 md:grid-cols-2">
                 {projects.map((p) => (
                     <Card key={p.id} className="overflow-hidden">
-                        <Image src={p.image} alt={p.title} width={600} height={400}
+                        <Carousel opts={{ slidesToScroll: "auto" }} className="w-full max-w-full mx-auto">
+                            <CarouselContent>
+                                {p.images.map((image, index) => (
+                                    <CarouselItem key={index}>
+                                        <Image src={image} alt={p.title} width={600} height={400}
 
-                            className="w-full h-48 object-cover object-top" />
+                                            className="w-full h-60 object-cover object-top" />
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+
+                            {p.images.length > 1 && <>
+                                <CarouselNext />
+                                <CarouselPrevious />
+                            </>}
+                        </Carousel>
+
                         <CardHeader>
                             <CardTitle>{p.title}</CardTitle>
                         </CardHeader>
-                        <CardContent className="flex flex-col gap-4">
+                        <CardContent className="flex flex-col gap-4 h-full justify-between">
                             <p className="text-muted-foreground">{p.description}</p>
 
                             <div className="flex items-center gap-4">

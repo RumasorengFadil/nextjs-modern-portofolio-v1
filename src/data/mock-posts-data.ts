@@ -11,16 +11,16 @@ export const projects = [
     title: "Wadon Firly POS & Accounting Website",
     description:
       "Web-based cashier and accounting application with Laravel + React.",
-    image: "/images/project/project-2.png",
+    images: ["/images/project/project-2.png"],
     link: "https://wadonfirly.my.id/",
-    source: "https://github.com/RumasorengFadil/Point-of-Sale-Application"
+    source: "https://github.com/RumasorengFadil/Point-of-Sale-Application",
   },
   {
     id: "2",
     title: "Bbyts Company Profile Website with Integrated Blog System",
     description:
-    "Company Profile Webiste with Next.js, Laravel, Tailwind, shadcn/ui.",
-    image: "/images/project/project-3.png",
+      "Company Profile Webiste with Next.js, Laravel, Tailwind, shadcn/ui.",
+    images: ["/images/project/project-3.png"],
     link: "https://www.bbyts.com/",
     source: "",
   },
@@ -28,15 +28,21 @@ export const projects = [
     id: "3",
     title: "Rotanademi Company Profile",
     description: "Company Profile Website with NextJs",
-    image: "/images/project/rotanademy-hero-section.png",
+    images: ["/images/project/rotanademy-hero-section.png"],
     link: "https://www.rotanademi.co.id/",
     source: "",
   },
   {
     id: "4",
     title: "Cazh Library Management System",
-    description: "A modern and simple Library Management System that can manage memberships, circulation, and bibliographies.",
-    image: "/images/project/library-management-system-1.png",
+    description:
+      "A modern and simple Library Management System that can manage memberships, circulation, and bibliographies.",
+    images: [
+      "/images/project/library-management-system-1.png",
+      "/images/project/library-management-system-2.png",
+      "/images/project/library-management-system-3.png",
+      "/images/project/library-management-system-4.png",
+    ],
     link: "https://www.rotanademi.co.id/",
     source: "https://github.com/RumasorengFadil/calms",
   },
@@ -147,7 +153,10 @@ production.`,
 
 export const socialLinks = [
   { text: "Instagram", href: "https://www.instagram.com/fadilrumasoreng/" },
-  { text: "LinkedIn", href: "https://www.linkedin.com/in/fadil-hijayat-rumasoreng-4944671b9/" },
+  {
+    text: "LinkedIn",
+    href: "https://www.linkedin.com/in/fadil-hijayat-rumasoreng-4944671b9/",
+  },
   { text: "Github", href: "https://github.com/RumasorengFadil" },
   { text: "Youtube", href: "https://github.com/RumasorengFadil" },
   { text: "Dribbble", href: "https://github.com/RumasorengFadil" },
