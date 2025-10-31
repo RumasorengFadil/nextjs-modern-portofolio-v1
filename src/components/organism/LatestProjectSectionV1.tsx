@@ -8,9 +8,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function LatestProject() {
     return (
-        <section id="projects" className="container py-20 mx-auto">
-            <h2 className="text-4xl font-bold text-center">Latest Project</h2>
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <section id="projects" className="container min-h-screen py-20 mx-auto">
+            <h2 className="text-4xl mb-16 font-bold text-center md:text-5xl">Latest Project</h2>
+            <div className="grid gap-6 md:grid-cols-2">
                 {projects.map((p) => (
                     <Card key={p.id} className="overflow-hidden">
                         <Carousel opts={{ slidesToScroll: "auto" }} className="w-full max-w-full mx-auto">

@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site"
 
 export default function HeroSection() {
     return (
-        <section className="container grid h-screen overflow-hidden mx-auto place-items-center py-24 text-center">
+        <section className="container grid min-h-screen overflow-hidden mx-auto place-items-center py-24 text-center">
             <div className="max-w-3xl">
                 <Image src="/images/app/hero-photo.png" alt="Jay" width={120} height={120}
                     className="mx-auto rounded-full border mb-6 animate-fade-in" />

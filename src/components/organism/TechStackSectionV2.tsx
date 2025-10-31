@@ -3,8 +3,8 @@ import Image from "next/image"
 export default function TechStackSection () {
     return (
         <section id="tech" className="container py-20 mx-auto">
-        <h2 className="text-4xl font-bold text-center">Tech Stack</h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-16">
+        <h2 className="text-4xl mb-16 font-bold text-center md:text-5xl">Tech Stack</h2>
+        <div className="flex flex-wrap justify-center gap-16">
           <Image src="/icons/techstack/nextjs.svg" width={40} height={40} alt="techstack-nextjs" />
           <Image src="/icons/techstack/laravel.svg" width={40} height={40} alt="techstack-laravel" />
           <Image src="/icons/techstack/tailwind.svg" width={40} height={40} alt="techstack-tailwind" />

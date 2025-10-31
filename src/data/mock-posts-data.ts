@@ -11,7 +11,7 @@ export const projects = [
     title: "Wadon Firly POS & Accounting Website",
     description:
       "Web-based cashier and accounting application with Laravel + React.",
-    images: ["/images/project/project-2.png"],
+    images: ["/images/project/project-2.webp"],
     link: "https://wadonfirly.my.id/",
     source: "https://github.com/RumasorengFadil/Point-of-Sale-Application",
   },
@@ -20,7 +20,7 @@ export const projects = [
     title: "Bbyts Company Profile Website with Integrated Blog System",
     description:
       "Company Profile Webiste with Next.js, Laravel, Tailwind, shadcn/ui.",
-    images: ["/images/project/project-3.png"],
+    images: ["/images/project/project-3.webp"],
     link: "https://www.bbyts.com/",
     source: "",
   },
@@ -38,12 +38,12 @@ export const projects = [
     description:
       "A modern and simple Library Management System that can manage memberships, circulation, and bibliographies.",
     images: [
-      "/images/project/library-management-system-1.png",
-      "/images/project/library-management-system-2.png",
-      "/images/project/library-management-system-3.png",
-      "/images/project/library-management-system-4.png",
+      "/images/project/library-management-system-1.webp",
+      "/images/project/library-management-system-2.webp",
+      "/images/project/library-management-system-3.webp",
+      "/images/project/library-management-system-4.webp",
     ],
-    link: "https://www.rotanademi.co.id/",
+    link: "https://github.com/RumasorengFadil/calms",
     source: "https://github.com/RumasorengFadil/calms",
   },
 ];
@@ -65,16 +65,15 @@ export const experience = [
 export const experienceV1 = [
   {
     company: "Abhiparaya Mahardika",
-    position: "Web Developer",
-    startDate: "May 2018",
-    endDate: "Sept 2020",
+    position: "Founder & Web Developer",
+    startDate: "January 2025",
+    endDate: "Now",
     summary: [
-      "Spearheaded the development of a modern blog platform using Laravel (backend) and Next.js (frontend) to strengthen the company’s digital presence and content strategy.",
-      "Built reusable, responsive, and accessible UI components using Tailwind CSS and shadcn/ui, enhancing maintainability and user experience.",
-      "Integrated Google Analytics to track blog performance, including article views, visitor demographics, and engagement metrics.",
-      "Engineered dynamic CMS features such as WYSIWYG-based blog creation, category & tag management, dashboard analytics, and comment moderation.",
-      "Designed and optimized RESTful API endpoints, model relationships, and Eloquent queries to support scalable content workflows.",
-      "Collaborated closely with stakeholders to translate business requirements into intuitive and practical CMS features.",
+      "Led end-to-end development of the company’s digital products, ensuring clean architecture, performance, and long-term scalability.",
+      "Established UI/UX standards and reusable component systems to improve development efficiency and deliver consistent user experiences.",
+      "Strengthened the company’s online presence and content strategy through modern web technologies and data-driven improvements.",
+      "Implemented development workflows, best practices, and structured documentation to improve maintainability and team onboarding readiness.",
+      "Collaborated with stakeholders to translate business needs into practical, user-focused features that support product and brand growth.",
     ],
   },
   {
@@ -84,9 +83,21 @@ export const experienceV1 = [
     endDate: "Oct 2024",
     summary: [
       "Led the Development and maintenance of responsive Library Management System web applications using Laravel and React.js",
-      "Implemented Single Page Applications (SPA) with Inertia.js",
-      "Utilized Tailwind CSS for frontend styling",
-      "Collaborated on testing, deployment, and API integration",
+      "Engineered a responsive and user-friendly application using Laravel, Inertia React.js, Tailwind CSS, and MySQL, which improved overall user engagement and experience.",
+      "Developed and deployed APIs for front-end integration, ensuring seamless communication between client and server.",
+      "Implemented best coding practices, resulting in maintainable and scalable code, and contributed to enhancing the overall quality of the system",
+    ],
+  },
+  {
+    company: "Telkom University",
+    position: "Team Leader & Web Developer - PKM-KC (Karsa Cipta)",
+    startDate: "Feb 2024",
+    endDate: "Aug 2024",
+    summary: [
+      "Led a team of 4 people in developing the Catur Jawa digital game as a more interactive medium for cultural preservation and education.",
+      "Managed the project roadmap, task distribution, and development timeline using an Agile approach to ensure effective progress.",
+      "Coordinating the cultural research process, game design, user testing, and prototype validation.",
+      "Collaborating in the preparation of proposals, presentations, and reports to successfully obtain funding from Belmawa Kemendikbud under the PKM-KC scheme.",
     ],
   },
   {
@@ -95,8 +106,9 @@ export const experienceV1 = [
     startDate: "Aug 2023",
     endDate: "Jan 2024",
     summary: [
-      "Learned modern Android app development using Kotlin",
-      "Applied MVVM architecture, Room Database, and Retrofit in real apps",
+      " Developed the front-end interface using Kotlin and XML, ensuring a seamless and responsive user experience.",
+      " Applied the MVVM architecture model, which enhanced code maintainability, scalability, and clarity.",
+      "Collaborated closely with the backend team through well-defined APIs to ensure smooth integration between the front end and back end.",
       "Mentored by professional engineers from top Indonesian tech companies",
     ],
   },

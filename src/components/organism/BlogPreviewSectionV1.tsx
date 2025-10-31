@@ -6,7 +6,7 @@ import { Blog } from "@/typedata/blog/blog";
 export default function BlogPreviewSection({blogs}:{blogs:Blog[]}) {
     return (
         <section id="posts" className="container py-20 mx-auto">
-            <h2 className="text-4xl font-bold text-center">Latest Posts</h2>
+            <h2 className="text-4xl font-bold text-center md:text-5xl">Latest Posts</h2>
             <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {blogs.map((b) => (
                     <Card key={b.id} >

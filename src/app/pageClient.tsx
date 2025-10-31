@@ -1,5 +1,4 @@
 "use client"
-import AboutSection from '@/components/organism/AboutSectionV2'
 import TechStackSection from '@/components/organism/TechStackSectionV2'
 import LatestProject from '@/components/organism/LatestProjectSectionV1'
 import HeroSection from '@/components/organism/HeroSectionV2'
@@ -13,6 +12,7 @@ import { Blog } from '@/typedata/blog/blog'
 import { useChat } from '@/hooks/use-chat'
 import { ChatPromptForm } from '@/components/organism/ChatPromptForm'
 import { Pagination } from '@/typedata/pagination/pagination'
+import { AboutSection } from '@/components/organism/AboutSectionV3'
 
 export default function PageClient({ pagination }: { pagination: Pagination<Blog> }) {
   const { handleChat, streamMessage, messages, streamDone, clearChat } = useChat();
@@ -20,6 +20,7 @@ export default function PageClient({ pagination }: { pagination: Pagination<Blog
     {/* Hero Section */}
     <HeroSection />
 
+    
     {/* Experience Section */}
     <FadeIn>
       <ExperienceSection />
@@ -39,6 +40,7 @@ export default function PageClient({ pagination }: { pagination: Pagination<Blog
     <FadeIn direction='left'>
       <TechStackSection />
     </FadeIn>
+
 
     {/* Command Prompt */}
     <CommandPrompt />
