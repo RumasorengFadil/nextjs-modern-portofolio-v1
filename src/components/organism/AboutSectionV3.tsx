@@ -31,13 +31,13 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="order-2 md:order-1">
               <p className="mb-6 leading-relaxed">
-                I'm a Fullstack Web Developer focused on building scalable, SEO-friendly, secure, and elegant web solutions that solve real business problems. I enjoy transforming ideas into reliable digital products with clean architecture, usability, and long-term maintainability in mind.
+                {"I'm a Fullstack Web Developer focused on building scalable, SEO-friendly, secure, and elegant web solutions that solve real business problems. I enjoy transforming ideas into reliable digital products with clean architecture, usability, and long-term maintainability in mind."}
               </p>
               <p className="mb-6 leading-relaxed">
-                When I'm not coding, I’m usually learning new development practices, exploring modern web technologies, or improving workflows to deliver better product value.
+                {"When I'm not coding, I’m usually learning new development practices, exploring modern web technologies, or improving workflows to deliver better product value."}
               </p>
               <p className="leading-relaxed">
-               My goal is to build meaningful solutions that help businesses grow sustainably while maintaining high standards in code quality, performance, and user experience.
+               {"My goal is to build meaningful solutions that help businesses grow sustainably while maintaining high standards in code quality, performance, and user experience."}
               </p>
             </div>
             <div className="order-1 md:order-2">
